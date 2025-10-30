@@ -13,6 +13,12 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 w-full border-b border-gray-100 bg-white/80 backdrop-blur">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-brand">
+          <img
+            src="/SanBonifacio_riflessologia_logo.png"
+            alt="Logo Centro Riflessologia"
+            className="h-8 w-8 rounded-sm object-cover"
+            loading="eager"
+          />
           <span className="text-lg font-semibold">Centro Riflessologia</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
