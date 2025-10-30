@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Blu petrolio del brand */
+  --brand: 16 81 102; /* #105166 */
+  --brand-foreground: 255 255 255;
+  /* Pesca tenue */
+  --peach: 233 176 125; /* #E9B07D */
+  /* Neutri */
+  --muted: 107 114 128; /* #6B7280 */
+  --surface: 248 250 252; /* #F8FAFC */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-gray-800 antialiased;
+}
+
+/* Utility */
+.btn {
+  @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold transition-colors;
+}
+.btn-primary {
+  @apply bg-brand text-white hover:bg-brand/90;
+}
+.btn-outline {
+  @apply border border-brand text-brand hover:bg-brand/10;
+}
+
+.card {
+  @apply rounded-xl bg-white p-6 shadow-card;
+}
+
+
