@@ -24,7 +24,7 @@ export default function Page() {
         subtitle="Il calore delle pietre per sciogliere tensioni e ritrovare equilibrio."
         primary={{ label: 'Prenota ora', href: 'https://wa.me/393494493683?text=Stone%20massage' }}
         secondary={{ label: 'Chiama', href: 'tel:+393494493683' }}
-        backgroundUrl="/images/stone-back.jpg"
+        backgroundUrl="/hot-stone-massage-benefits.png"
         overlay="light"
       />
 

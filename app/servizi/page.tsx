@@ -62,7 +62,7 @@ export default function ServiziPage() {
             descrizione:
               'Massaggio con pietre calde per sciogliere tensioni e favorire il rilassamento.',
             href: '/servizi/stone-massage',
-            immagineBackground: '/images/stone-back.jpg',
+            immagineBackground: '/hot-stone-massage-benefits.png',
             prezzo: '60€',
           },
         ].map((s) => (
@@ -77,6 +77,14 @@ export default function ServiziPage() {
           Scrivimi su WhatsApp al <a className="underline" href="https://wa.me/393494493683">+39 349 449 36 83</a> o invia una mail a
           <a className="ml-1 underline" href="mailto:paganottodanya@gmail.com">paganottodanya@gmail.com</a>.
         </p>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <a className="btn btn-primary" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20informazioni%20e%20prenotare.">
+            Scrivi su WhatsApp
+          </a>
+          <a className="btn btn-outline" href="mailto:paganottodanya@gmail.com">
+            Manda una mail
+          </a>
+        </div>
       </div>
     </div>
   )

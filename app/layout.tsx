@@ -4,6 +4,7 @@ import { Poppins, Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppFloatButton from '@/components/WhatsAppFloatButton'
+import { Analytics } from '@vercel/analytics/react'
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['600', '700'] })
 const inter = Inter({ subsets: ['latin'] })
@@ -56,6 +57,7 @@ export default function RootLayout({
         <main id="maincontent" className="min-h-[70vh]">{children}</main>
         <Footer />
         <WhatsAppFloatButton />
+        <Analytics />
       </body>
     </html>
   )

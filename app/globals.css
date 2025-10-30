@@ -37,4 +37,21 @@ body {
   @apply rounded-xl bg-white p-6 shadow-card;
 }
 
+/* Marquee animation for reviews */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+}
+.marquee-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: marquee-left 35s linear infinite;
+}
+
 

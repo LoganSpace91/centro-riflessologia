@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero'
 import ServiceCard from '@/components/ServiceCard'
 import MapEmbed from '@/components/MapEmbed'
+import ReviewsSection from '@/components/ReviewsSection'
 
 export const metadata = {
   title: 'Massaggio di riflessologia a San Bonifacio | Professionisti dei piedi',
@@ -84,6 +85,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <ReviewsSection />
     </>
   )
 }

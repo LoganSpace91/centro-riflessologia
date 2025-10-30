@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 const nav = [
+  { href: '/', label: 'Home' },
   { href: '/servizi', label: 'Servizi' },
   { href: '/riflessologia-plantare', label: 'Riflessologia' },
   { href: '/operatore-olistico', label: 'Operatore olistico' },
@@ -14,7 +15,7 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-brand">
           <img
-            src="/SanBonifacio_riflessologia_logo.png"
+            src="/SanBonifacio_logo.png"
             alt="Logo Centro Riflessologia"
             className="h-8 w-8 rounded-sm object-cover"
             loading="eager"
