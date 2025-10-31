@@ -34,7 +34,7 @@ const reviews: Review[] = [
   {
     name: 'Cliente verificato — Viso “ESSERE”',
     text:
-      'Jessica mi ha ascoltata e ha personalizzato il trattamento viso ALIUS: pelle più luminosa e zero arrossamenti.',
+      'Jessica Reiti mi ha ascoltata e ha personalizzato il trattamento viso ALIUS: pelle più luminosa e zero arrossamenti.',
     rating: 4.8,
     photo: 'https://i.pravatar.cc/96?img=15',
   },

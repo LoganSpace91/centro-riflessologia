@@ -22,7 +22,6 @@ export default function ServiziPage() {
               'Massaggio mirato ai punti riflessi dei piedi per favorire equilibrio e rilassamento.',
             href: '/servizi/massaggio-riflessologia-corpo',
             immagineBackground: '/piede_2.jpg',
-            prezzo: '50€',
           },
           {
             titolo:
@@ -31,7 +30,6 @@ export default function ServiziPage() {
               'Riflessologia dei piedi con applicazione di impacco: azione sinergica, profondo relax.',
             href: '/servizi/riflessologia-impacco',
             immagineBackground: '/images/foot-massage-2.jpg',
-            prezzo: '55€',
           },
           {
             titolo: 'Massaggio corpo parziale / bambino',
@@ -39,7 +37,6 @@ export default function ServiziPage() {
               'Trattamento delicato, mirato a zone specifiche. Ideale anche per i più piccoli.',
             href: '/servizi/massaggio-parziale-bambino',
             immagineBackground: '/Bambino_1.jpg',
-            prezzo: '35€',
           },
           {
             titolo: 'Trattamento corpo per inestetismo ALIUS',
@@ -47,7 +44,6 @@ export default function ServiziPage() {
               'Percorso dedicato agli inestetismi con tecniche dolci e prodotti mirati.',
             href: '/servizi/alius-corpo',
             immagineBackground: '/images/bamboo-leaves.jpg',
-            prezzo: '60/70€',
           },
           {
             titolo: 'Trattamento viso “ESSERE” ALIUS',
@@ -55,7 +51,6 @@ export default function ServiziPage() {
               'Cura del viso rigenerante per ritrovare luminosità e benessere.',
             href: '/servizi/alius-viso-essere',
             immagineBackground: '/faccia_1.jpeg',
-            prezzo: '60€',
           },
           {
             titolo: 'Stone massage',
@@ -63,7 +58,6 @@ export default function ServiziPage() {
               'Massaggio con pietre calde per sciogliere tensioni e favorire il rilassamento.',
             href: '/servizi/stone-massage',
             immagineBackground: '/hot-stone-massage-benefits.png',
-            prezzo: '60€',
           },
         ].map((s) => (
           <ServiceCard key={s.titolo} {...s} />

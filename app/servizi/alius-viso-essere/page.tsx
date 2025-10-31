@@ -69,6 +69,13 @@ export default function Page() {
               <QA q="Posso truccarmi dopo?" a="Meglio attendere qualche ora per permettere ai principi attivi di agire in profondità." />
             </div>
           </section>
+          <section className="card">
+            <h2 className="text-xl font-semibold text-brand">Durata e prezzo</h2>
+            <p className="mt-2 text-gray-700">
+              Il trattamento dura mediamente 50–60 minuti e ha un costo di <span className="font-semibold text-brand">60€</span>. Possiamo strutturare
+              pacchetti stagionali per mantenere la pelle vitale tutto l’anno.
+            </p>
+          </section>
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">

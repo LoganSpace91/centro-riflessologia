@@ -10,7 +10,7 @@ export default function Footer() {
               <img src="/SanBonifacio_logo.png" alt="Logo Centro Riflessologia" className="h-10 w-10 object-cover" />
               <h3 className="text-lg font-semibold text-brand">Centro Riflessologia</h3>
             </div>
-            <p className="mt-2 text-sm text-gray-700">Paganotto Danya • Rieti Jessica</p>
+            <p className="mt-2 text-sm text-gray-700">Paganotto Danya • Jessica Reiti</p>
             <p className="text-sm text-gray-700">Via Tombole, 168 – San Bonifacio (VR)</p>
           </div>
           <div>

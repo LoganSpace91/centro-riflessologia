@@ -66,6 +66,13 @@ export default function Page() {
               <QA q="Posso proseguire con prodotti a casa?" a="Sì, possiamo consigliarti routine di mantenimento per proseguire i benefici." />
             </div>
           </section>
+          <section className="card">
+            <h2 className="text-xl font-semibold text-brand">Durata e prezzo</h2>
+            <p className="mt-2 text-gray-700">
+              La seduta singola dura circa 60 minuti e ha un costo di <span className="font-semibold text-brand">60€</span>. Percorsi mirati su aree
+              specifiche possono prevedere trattamenti da <span className="font-semibold text-brand">70€</span> con prodotti intensivi personalizzati.
+            </p>
+          </section>
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">

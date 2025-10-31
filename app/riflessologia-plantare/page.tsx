@@ -48,6 +48,8 @@ export default function RiflessologiaPlantarePage() {
           <p className="mt-3 text-gray-700">
             Ogni seduta dura in media 50–60 minuti. Il numero di incontri varia in base agli obiettivi e alla risposta personale. Non è
             richiesta una preparazione specifica: indossa abiti comodi ed evita pasti molto abbondanti nelle ore immediatamente precedenti.
+            La seduta singola ha un costo di <span className="font-semibold text-brand">50€</span>; la variante con impacco terapeutico è disponibile a
+            <span className="font-semibold text-brand">55€</span>.
           </p>
         </section>
         <section className="card md:col-span-2">

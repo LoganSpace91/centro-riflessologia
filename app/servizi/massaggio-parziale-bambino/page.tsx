@@ -59,6 +59,7 @@ export default function Page() {
             <p className="mt-2 text-gray-700">
               Si esegue in un ambiente caldo e tranquillo, con luci soffuse e, se piace, musica dolce. Si usa un olio naturale adatto alla pelle
               delicata del bambino e le mani scorrono con dolcezza su gambe, braccia, pancia e schiena, rispettando sempre il ritmo del piccolo.
+              La seduta dura circa 25–30 minuti e ha un costo di <span className="font-semibold text-brand">35€</span>.
             </p>
           </section>
           <section className="card">

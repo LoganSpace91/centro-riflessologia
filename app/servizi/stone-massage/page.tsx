@@ -64,6 +64,13 @@ export default function Page() {
             </p>
           </section>
           <section className="card">
+            <h2 className="text-xl font-semibold text-brand">Durata e prezzo</h2>
+            <p className="mt-2 text-gray-700">
+              Una seduta dura circa 60 minuti e ha un costo di <span className="font-semibold text-brand">60€</span>. Possiamo proporre cicli dedicati
+              per un rilascio graduale delle tensioni.
+            </p>
+          </section>
+          <section className="card">
             <h2 className="text-xl font-semibold text-brand">Domande frequenti</h2>
             <div className="mt-2 grid gap-3">
               <QA q="Le pietre sono molto calde?" a="La temperatura è sempre controllata per essere confortevole e sicura." />
