@@ -3,8 +3,8 @@ import Hero from '@/components/Hero'
 export const metadata = {
   title: 'Riflessologia plantare con impacco terapeutico',
   description:
-    'Massaggio di riflessologia plantare con impacco terapeutico: trattamento sinergico per piedi e benessere generale a San Bonifacio.',
-  keywords: ['Massaggio', 'Riflessologia', 'piedi', 'professionisti', 'San Bonifacio'],
+    'Massaggio di riflessologia plantare con impacco terapeutico a San Bonifacio e Verona: trattamento sinergico per benessere e relax.',
+  keywords: ['Massaggio', 'Riflessologia', 'piedi', 'professionisti', 'San Bonifacio', 'Riflessologia plantare Verona'],
 }
 
 function QA({ q, a }: { q: string; a: string }) {

@@ -6,8 +6,8 @@ import ReviewsSection from '@/components/ReviewsSection'
 export const metadata = {
   title: 'Massaggio di riflessologia a San Bonifacio | Professionisti dei piedi',
   description:
-    'Centro Riflessologia a San Bonifacio (VR): massaggio di riflessologia plantare per i piedi eseguito da professionisti. Prenota ora una seduta di benessere.',
-  keywords: ['Massaggio', 'Riflessologia', 'piedi', 'professionisti', 'San Bonifacio'],
+    'Centro Riflessologia a San Bonifacio (VR) e Verona: massaggio di riflessologia plantare per i piedi eseguito da professionisti. Prenota ora una seduta di benessere.',
+  keywords: ['Massaggio', 'Riflessologia', 'piedi', 'professionisti', 'San Bonifacio', 'Riflessologia plantare Verona'],
 }
 
 export default function HomePage() {
@@ -15,7 +15,7 @@ export default function HomePage() {
     <>
       <Hero
         title="Parti dal piede per lavorare nel corpo"
-        subtitle="Ritrova equilibrio e benessere con il massaggio di riflessologia plantare: professionisti dei piedi a San Bonifacio (VR)."
+        subtitle="Ritrova equilibrio e benessere con il massaggio di riflessologia plantare, anche a Verona e provincia."
         primary={{ label: 'Prenota su WhatsApp', href: 'https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20trattamento%20di%20riflessologia.' }}
         secondary={{ label: 'Chiama Danya', href: 'tel:+393494493683' }}
         backgroundUrl="/Piede_home.png"

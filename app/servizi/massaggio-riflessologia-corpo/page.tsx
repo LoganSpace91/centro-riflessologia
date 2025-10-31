@@ -3,8 +3,8 @@ import Hero from '@/components/Hero'
 export const metadata = {
   title: 'Massaggio corpo con riflessologia plantare',
   description:
-    'Trattamento corpo completo che integra massaggio distensivo e riflessologia plantare per un benessere profondo.',
-  keywords: ['Massaggio', 'Riflessologia', 'piedi', 'professionisti', 'San Bonifacio'],
+    'Massaggio corpo con riflessologia plantare a San Bonifacio e Verona: trattamento distensivo e punti riflessi per un benessere profondo.',
+  keywords: ['Massaggio', 'Riflessologia', 'piedi', 'professionisti', 'San Bonifacio', 'Riflessologia plantare Verona'],
 }
 
 type QAProps = { q: string; a: string }

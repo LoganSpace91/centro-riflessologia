@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: '%s | Centro Riflessologia',
   },
   description:
-    'Trattamenti di riflessologia plantare e approccio olistico per il benessere. San Bonifacio (VR). Prenota ora con Danya Paganotto.',
+    'Trattamenti di riflessologia plantare e approccio olistico per il benessere a Verona e provincia. San Bonifacio (VR). Prenota ora con Danya Paganotto.',
   keywords: [
     'Massaggio',
     'Riflessologia',
@@ -24,11 +24,12 @@ export const metadata: Metadata = {
     'professionisti',
     'San Bonifacio',
     'Riflessologia plantare',
+    'Riflessologia plantare Verona',
   ],
   openGraph: {
     title: 'Centro Riflessologia — Paganotto Danya',
     description:
-      'Trattamenti di riflessologia plantare e approccio olistico per il benessere. San Bonifacio (VR).',
+      'Trattamenti di riflessologia plantare e approccio olistico per il benessere a Verona e provincia. San Bonifacio (VR).',
     url: 'https://centro-riflessologia.vercel.app',
     siteName: 'Centro Riflessologia',
     type: 'website',

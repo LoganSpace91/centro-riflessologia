@@ -1,8 +1,8 @@
 export const metadata = {
   title: 'Riflessologia plantare — Massaggio piedi a San Bonifacio',
   description:
-    'Massaggio di riflessologia plantare per i piedi a San Bonifacio: professionisti, benefici e cosa aspettarsi durante la seduta.',
-  keywords: ['Massaggio', 'Riflessologia', 'piedi', 'professionisti', 'San Bonifacio'],
+    'Riflessologia plantare professionale a San Bonifacio e Verona: benefici, svolgimento e consigli per trarre il meglio da ogni seduta.',
+  keywords: ['Riflessologia plantare Verona', 'Massaggio', 'piedi', 'professionisti', 'San Bonifacio'],
 }
 
 export default function RiflessologiaPlantarePage() {
@@ -13,7 +13,7 @@ export default function RiflessologiaPlantarePage() {
         La riflessologia plantare è una tecnica di massaggio dolce e naturale che lavora sui punti riflessi situati nella pianta dei piedi.
         Ogni zona del piede corrisponde a organi e aree del corpo: stimolandole con pressioni mirate, si favorisce l’autoguarigione e si
         promuove l’equilibrio globale dell’organismo. È un approccio olistico che non tratta solo il sintomo ma accompagna la persona verso
-        un benessere psicofisico completo.
+        un benessere psicofisico completo, disponibile nel nostro centro a San Bonifacio e in tutta l’area di Verona.
       </p>
 
       <div className="mt-10 grid gap-8 md:grid-cols-2">
