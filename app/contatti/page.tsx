@@ -28,7 +28,7 @@ export default function ContattiPage() {
             </li>
             <li>
               <span className="font-semibold">Instagram:</span>{' '}
-              <a className="underline" href="https://instagram.com/centro_riflessologia" target="_blank" rel="noreferrer">@centro_riflessologia</a>
+              <a className="underline" href="https://instagram.com/centro_riflessologia_sanbo" target="_blank" rel="noreferrer">@centro_riflessologia_sanbo</a>
             </li>
             <li>
               <span className="font-semibold">Indirizzo:</span> Via Tombole, 168 – San Bonifacio (VR)
@@ -39,8 +39,15 @@ export default function ContattiPage() {
           </ul>
 
           <div className="mt-6 flex gap-3">
-            <a className="btn btn-primary" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20appuntamento.">Prenota su WhatsApp</a>
-            <a className="btn btn-outline" href="tel:+393494493683">Chiama ora</a>
+            <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20appuntamento.">Prenota su WhatsApp</a>
+            <a
+              className="btn-instagram"
+              href="https://instagram.com/centro_riflessologia_sanbo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Scrivi su Instagram
+            </a>
           </div>
         </div>
         <div className="overflow-hidden rounded-xl shadow-card">

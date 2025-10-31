@@ -1,6 +1,6 @@
 import CTAButton from './CTAButton'
 
-type Action = { label: string; href: string }
+type Action = { label: string; href: string; variant?: 'primary' | 'outline' | 'whatsapp' | 'instagram' }
 
 export default function Hero({
   title,
@@ -41,8 +41,18 @@ export default function Hero({
           <h1 className="text-4xl font-bold text-brand md:text-5xl">{title}</h1>
           {subtitle ? <p className="mt-4 text-lg text-gray-700">{subtitle}</p> : null}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <CTAButton href={primary.href} label={primary.label} />
-            {secondary ? <CTAButton href={secondary.href} label={secondary.label} variant="outline" /> : null}
+            <CTAButton
+              href={primary.href}
+              label={primary.label}
+              variant={primary.variant ?? 'primary'}
+            />
+            {secondary ? (
+              <CTAButton
+                href={secondary.href}
+                label={secondary.label}
+                variant={secondary.variant ?? 'outline'}
+              />
+            ) : null}
           </div>
         </div>
       </div>

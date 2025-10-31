@@ -81,9 +81,6 @@ export default function ServiziPage() {
           <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20informazioni%20e%20prenotare.">
             Scrivi su WhatsApp
           </a>
-          <a className="btn btn-outline" href="mailto:paganottodanya@gmail.com">
-            Manda una mail
-          </a>
           <a
             className="btn-instagram"
             href="https://instagram.com/centro_riflessologia_sanbo"

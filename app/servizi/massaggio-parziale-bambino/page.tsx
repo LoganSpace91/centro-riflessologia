@@ -22,8 +22,8 @@ export default function Page() {
       <Hero
         title="Massaggio corpo parziale / bambino"
         subtitle="Un trattamento breve e mirato, pensato per sciogliere tensioni con dolcezza."
-        primary={{ label: 'Prenota ora', href: 'https://wa.me/393494493683?text=Massaggio%20parziale%20o%20bambino' }}
-        secondary={{ label: 'Chiama', href: 'tel:+393494493683' }}
+        primary={{ label: 'Prenota su WhatsApp', href: 'https://wa.me/393494493683?text=Massaggio%20parziale%20o%20bambino', variant: 'whatsapp' }}
+        secondary={{ label: 'Scrivi su Instagram', href: 'https://instagram.com/centro_riflessologia_sanbo', variant: 'instagram' }}
         backgroundUrl="/Bambino_1.jpg"
         overlay="light"
       />
@@ -71,8 +71,7 @@ export default function Page() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">
-          <a className="btn btn-primary" href="https://wa.me/393494493683?text=Prenotazione%20Massaggio%20parziale%2Fbambino">Prenota su WhatsApp</a>
-          <a className="btn btn-outline" href="tel:+393494493683">Chiama il centro</a>
+          <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Prenotazione%20Massaggio%20parziale%2Fbambino">Prenota su WhatsApp</a>
         </div>
       </div>
     </>

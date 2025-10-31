@@ -22,8 +22,8 @@ export default function Page() {
       <Hero
         title="Riflessologia con impacco terapeutico"
         subtitle="La sinergia tra riflessologia plantare e impacco caldo/funzionale per un rilassamento profondo."
-        primary={{ label: 'Prenota ora', href: 'https://wa.me/393494493683?text=Riflessologia%20con%20impacco%20terapeutico' }}
-        secondary={{ label: 'Chiama', href: 'tel:+393494493683' }}
+        primary={{ label: 'Prenota su WhatsApp', href: 'https://wa.me/393494493683?text=Riflessologia%20con%20impacco%20terapeutico', variant: 'whatsapp' }}
+        secondary={{ label: 'Scrivi su Instagram', href: 'https://instagram.com/centro_riflessologia_sanbo', variant: 'instagram' }}
         backgroundUrl="/images/foot-massage-2.jpg"
         overlay="light"
       />
@@ -87,8 +87,7 @@ export default function Page() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">
-          <a className="btn btn-primary" href="https://wa.me/393494493683?text=Prenotazione%20Riflessologia%20con%20impacco">Prenota su WhatsApp</a>
-          <a className="btn btn-outline" href="tel:+393494493683">Chiama il centro</a>
+          <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Prenotazione%20Riflessologia%20con%20impacco">Prenota su WhatsApp</a>
         </div>
       </div>
     </>

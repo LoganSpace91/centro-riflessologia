@@ -24,8 +24,8 @@ export default function Page() {
       <Hero
         title="Massaggio corpo con riflessologia plantare"
         subtitle="Unisce manualità distensive e stimolazione dei punti riflessi del piede per riequilibrare tutto il corpo."
-        primary={{ label: 'Prenota ora', href: 'https://wa.me/393494493683?text=Massaggio%20corpo%20con%20riflessologia%20plantare' }}
-        secondary={{ label: 'Chiama', href: 'tel:+393494493683' }}
+        primary={{ label: 'Prenota su WhatsApp', href: 'https://wa.me/393494493683?text=Vorrei%20prenotare%20il%20massaggio%20corpo%20con%20riflessologia%20plantare', variant: 'whatsapp' }}
+        secondary={{ label: 'Scrivi su Instagram', href: 'https://instagram.com/centro_riflessologia_sanbo', variant: 'instagram' }}
         backgroundUrl="/piede_2.jpg"
         overlay="light"
       />
@@ -91,15 +91,12 @@ export default function Page() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">
-          <a
-            className="btn btn-primary"
-            href="https://wa.me/393494493683?text=Vorrei%20prenotare%20il%20massaggio%20corpo%20con%20riflessologia%20plantare"
-          >
-            Prenota su WhatsApp
-          </a>
-          <a className="btn btn-outline" href="tel:+393494493683">
-            Chiama il centro
-          </a>
+        <a
+          className="btn-whatsapp"
+          href="https://wa.me/393494493683?text=Vorrei%20prenotare%20il%20massaggio%20corpo%20con%20riflessologia%20plantare"
+        >
+          Prenota su WhatsApp
+        </a>
         </div>
       </div>
     </>

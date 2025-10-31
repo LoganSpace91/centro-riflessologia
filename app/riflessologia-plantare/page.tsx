@@ -60,8 +60,7 @@ export default function RiflessologiaPlantarePage() {
       </div>
 
       <div className="mt-10 flex flex-wrap gap-3">
-        <a className="btn btn-primary" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20una%20seduta%20di%20riflessologia.">Prenota su WhatsApp</a>
-        <a className="btn btn-outline" href="tel:+393494493683">Chiama Danya</a>
+        <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20una%20seduta%20di%20riflessologia.">Prenota su WhatsApp</a>
       </div>
     </div>
   )

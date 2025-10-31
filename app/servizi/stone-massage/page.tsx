@@ -22,8 +22,8 @@ export default function Page() {
       <Hero
         title="Stone massage"
         subtitle="Il calore delle pietre per sciogliere tensioni e ritrovare equilibrio."
-        primary={{ label: 'Prenota ora', href: 'https://wa.me/393494493683?text=Stone%20massage' }}
-        secondary={{ label: 'Chiama', href: 'tel:+393494493683' }}
+        primary={{ label: 'Prenota su WhatsApp', href: 'https://wa.me/393494493683?text=Prenotazione%20Stone%20massage', variant: 'whatsapp' }}
+        secondary={{ label: 'Scrivi su Instagram', href: 'https://instagram.com/centro_riflessologia_sanbo', variant: 'instagram' }}
         backgroundUrl="/hot-stone-massage-benefits.png"
         overlay="light"
       />
@@ -73,8 +73,7 @@ export default function Page() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">
-          <a className="btn btn-primary" href="https://wa.me/393494493683?text=Prenotazione%20Stone%20massage">Prenota su WhatsApp</a>
-          <a className="btn btn-outline" href="tel:+393494493683">Chiama il centro</a>
+          <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Prenotazione%20Stone%20massage">Prenota su WhatsApp</a>
         </div>
       </div>
     </>

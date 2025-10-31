@@ -22,8 +22,8 @@ export default function Page() {
       <Hero
         title="Trattamento viso “ESSERE” ALIUS"
         subtitle="Un momento di cura e luminosità per la pelle del viso."
-        primary={{ label: 'Prenota ora', href: 'https://wa.me/393494493683?text=ALIUS%20viso%20ESSERE' }}
-        secondary={{ label: 'Chiama', href: 'tel:+393494493683' }}
+        primary={{ label: 'Prenota su WhatsApp', href: 'https://wa.me/393494493683?text=ALIUS%20viso%20ESSERE', variant: 'whatsapp' }}
+        secondary={{ label: 'Scrivi su Instagram', href: 'https://instagram.com/centro_riflessologia_sanbo', variant: 'instagram' }}
         backgroundUrl="/faccia_1.jpeg"
         overlay="light"
       />
@@ -72,8 +72,7 @@ export default function Page() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">
-          <a className="btn btn-primary" href="https://wa.me/393494493683?text=Prenotazione%20ALIUS%20viso%20ESSERE">Prenota su WhatsApp</a>
-          <a className="btn btn-outline" href="tel:+393494493683">Chiama il centro</a>
+          <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Prenotazione%20ALIUS%20viso%20ESSERE">Prenota su WhatsApp</a>
         </div>
       </div>
     </>

@@ -16,8 +16,8 @@ export default function HomePage() {
       <Hero
         title="Parti dal piede per lavorare nel corpo"
         subtitle="Ritrova equilibrio e benessere con il massaggio di riflessologia plantare, anche a Verona e provincia."
-        primary={{ label: 'Prenota su WhatsApp', href: 'https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20trattamento%20di%20riflessologia.' }}
-        secondary={{ label: 'Chiama Danya', href: 'tel:+393494493683' }}
+        primary={{ label: 'Prenota su WhatsApp', href: 'https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20trattamento%20di%20riflessologia.', variant: 'whatsapp' }}
+        secondary={{ label: 'Scrivi su Instagram', href: 'https://instagram.com/centro_riflessologia_sanbo', variant: 'instagram' }}
         backgroundUrl="/Piede_home.png"
         overlay="light"
       />
@@ -81,7 +81,6 @@ export default function HomePage() {
           <p className="mt-2 text-gray-700">Scrivimi e fissiamo insieme il tuo appuntamento.</p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20appuntamento.">Prenota su WhatsApp</a>
-            <a className="btn btn-outline" href="tel:+393494493683">Chiama Danya</a>
             <a
               className="btn-instagram"
               href="https://instagram.com/centro_riflessologia_sanbo"

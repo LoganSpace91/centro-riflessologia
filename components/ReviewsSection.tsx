@@ -126,12 +126,6 @@ export default function ReviewsSection() {
           <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-white to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-white to-transparent" />
         </div>
-        <div className="mt-10 text-center">
-          <CTAButton
-            href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20ho%20letto%20le%20recensioni%20e%20vorrei%20prenotare."
-            label="Prenota ora"
-          />
-        </div>
       </div>
     </section>
   )
