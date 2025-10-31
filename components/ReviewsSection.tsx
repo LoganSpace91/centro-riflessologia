@@ -11,44 +11,88 @@ type Review = {
 
 const reviews: Review[] = [
   {
-    name: 'Cliente verificato',
+    name: 'Maria P. — Riflessologia',
     text:
-      'Esperienza meravigliosa: massaggio ai piedi preciso e delicato. Mi sono sentita subito più leggera e rilassata.',
+      'Danya ha mani delicate ma precise: ero gonfia e scettica, dopo la riflessologia ho dormito tutta la notte. 50€ spesi benissimo.',
     rating: 5,
     photo: 'https://i.pravatar.cc/96?img=32',
   },
   {
-    name: 'Cliente verificato',
+    name: 'Luca R. — Impacco terapeutico',
     text:
-      'Riflessologia fatta con grande professionalità. Il dolore alla schiena è migliorato e ho dormito benissimo.',
-    rating: 4.8,
+      'Danya ha scelto un impacco alle erbe su misura e ha lavorato con pazienza sui miei piedi: mal di schiena dimezzato in due sedute.',
+    rating: 4.9,
     photo: 'https://i.pravatar.cc/96?img=47',
   },
   {
-    name: 'Cliente verificato',
+    name: 'Elena S. — Massaggio bimbo',
     text:
-      'Ambiente sereno e accogliente. Consigli utili e trattamento molto efficace. Tornerò presto!',
+      'Il tocco di Danya è stato dolcissimo: ha parlato con mio figlio, ci ha coinvolti e ora dorme sereno. Un supporto prezioso per noi genitori.',
     rating: 4.9,
+    photo: 'https://i.pravatar.cc/96?img=21',
+  },
+  {
+    name: 'Cliente verificato — Viso “ESSERE”',
+    text:
+      'Jessica mi ha ascoltata e ha personalizzato il trattamento viso ALIUS: pelle più luminosa e zero arrossamenti.',
+    rating: 4.8,
     photo: 'https://i.pravatar.cc/96?img=15',
   },
   {
     name: 'Cliente verificato',
     text:
-      'Massaggio impeccabile, mani esperte. Ho percepito subito un miglioramento della circolazione.',
-    rating: 4.7,
+      'Stone massage da 60€: calore avvolgente e contrattura cervicale scomparsa. Un’ora di pace totale.',
+    rating: 4.6,
     photo: 'https://i.pravatar.cc/96?img=5',
   },
   {
     name: 'Cliente verificato',
-    text: 'Professionalità e gentilezza. Massaggio ai piedi davvero utile per scaricare lo stress.',
-    rating: 4.8,
-    photo: 'https://i.pravatar.cc/96?img=21',
+    text:
+      'Percorso ALIUS: pelle più tonica e gambe leggere. Ho trovato consigli pratici e zero pressioni commerciali.',
+    rating: 4.7,
+    photo: 'https://i.pravatar.cc/96?img=9',
   },
   {
     name: 'Cliente verificato',
-    text: 'Ottima esperienza, mi sono sentito ascoltato e seguito con attenzione. Consiglio!',
-    rating: 4.9,
-    photo: 'https://i.pravatar.cc/96?img=9',
+    text:
+      'Tre sedute di riflessologia hanno ridotto ansia e insonnia. Prezzi chiari e orari flessibili.',
+    rating: 4.8,
+    photo: 'https://i.pravatar.cc/96?img=18',
+  },
+  {
+    name: 'Cliente verificato',
+    text:
+      'Impacco alle erbe: piedi sgonfi e caldi per giorni. Ogni passaggio spiegato con cura.',
+    rating: 5,
+    photo: 'https://i.pravatar.cc/96?img=41',
+  },
+  {
+    name: 'Cliente verificato',
+    text:
+      'Pelle sensibile? Il trattamento viso ALIUS ha rispettato ogni esigenza: texture uniforme e luce naturale.',
+    rating: 4.7,
+    photo: 'https://i.pravatar.cc/96?img=12',
+  },
+  {
+    name: 'Cliente verificato',
+    text:
+      'Pietre calde abbinate alla riflessologia: schiena sciolta e mente leggera. Tornerò sicuramente.',
+    rating: 4.6,
+    photo: 'https://i.pravatar.cc/96?img=28',
+  },
+  {
+    name: 'Cliente verificato',
+    text:
+      'Dolori cervicali ridotti del 70%. Sedute personalizzate e tanta disponibilità.',
+    rating: 4.8,
+    photo: 'https://i.pravatar.cc/96?img=44',
+  },
+  {
+    name: 'Cliente verificato',
+    text:
+      'Riflessologia + impacco: routine più leggera e tanta energia. Centro accogliente e professionale.',
+    rating: 5,
+    photo: 'https://i.pravatar.cc/96?img=31',
   },
 ]
 

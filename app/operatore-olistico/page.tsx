@@ -19,13 +19,12 @@ export default function OperatoreOlisticoPage() {
       />
 
       <div className="container py-14">
-      <h1 className="text-3xl font-bold text-brand">Operatore olistico</h1>
-      <p className="mt-3 max-w-3xl text-gray-700">
-        L’operatore olistico guida la persona verso il benessere globale considerando corpo, mente ed emozioni in modo integrato.
-        Le tecniche sono dolci, non invasive e mirano a rilassamento, ascolto profondo e riequilibrio naturale.
-      </p>
-
-      <div className="mt-10 grid gap-8 md:grid-cols-2">
+        <h1 className="text-3xl font-bold text-brand">Operatore olistico</h1>
+        <p className="mt-3 max-w-3xl text-gray-700">
+          L’operatore olistico guida la persona verso il benessere globale considerando corpo, mente ed emozioni in modo integrato.
+          Le tecniche sono dolci, non invasive e mirano a rilassamento, ascolto profondo e riequilibrio naturale.
+        </p>
+        <div className="mt-10 grid gap-8 md:grid-cols-2">
         <section className="card">
           <h2 className="text-xl font-semibold text-brand">Doti, qualità e capacità</h2>
           <ul className="mt-3 list-disc space-y-2 pl-6 text-gray-700">
@@ -57,6 +56,11 @@ export default function OperatoreOlisticoPage() {
           </p>
         </section>
       </div>
+
+        <div className="mt-8 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+          <strong>Nota importante:</strong> l’operatore olistico non sostituisce medici e professionisti sanitari. Non effettua diagnosi né
+          prescrive farmaci; può affiancare i percorsi terapeutici come supporto al benessere.
+        </div>
 
       <div className="mt-10 flex flex-wrap gap-3">
         <a className="btn btn-primary" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20maggiori%20informazioni%20sui%20trattamenti%20olistici.">Scrivi su WhatsApp</a>

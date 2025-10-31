@@ -33,6 +33,22 @@ body {
   @apply border border-brand text-brand hover:bg-brand/10;
 }
 
+.btn-whatsapp {
+  @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold text-white transition-colors;
+  background-color: #25D366;
+}
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+.btn-instagram {
+  @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold text-white transition-colors;
+  background-image: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+.btn-instagram:hover {
+  filter: brightness(0.9);
+}
+
 .card {
   @apply rounded-xl bg-white p-6 shadow-card;
 }
@@ -51,7 +67,7 @@ body {
   display: flex;
   gap: 1rem;
   width: max-content;
-  animation: marquee-left 35s linear infinite;
+  animation: marquee-left 55s linear infinite;
 }
 
 

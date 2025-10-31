@@ -30,42 +30,40 @@ export default function Page() {
 
       <div className="container py-12">
         <section className="card">
-          <h2 className="text-xl font-semibold text-brand">Introduzione</h2>
+          <h2 className="text-xl font-semibold text-brand">Un percorso delicato e mirato per prendersi cura di sé</h2>
           <p className="mt-2 text-gray-700">
-            Trattamento corpo che combina manualità dolci e prodotti selezionati. L’obiettivo è favorire un aspetto più armonioso nel tempo,
-            in sinergia con sane abitudini quotidiane.
+            Il trattamento corpo ALIUS accompagna la persona in un viaggio di rinascita. Tecniche manuali dolci e prodotti specifici lavorano
+            in sinergia per donare alla pelle un aspetto più levigato, equilibrato e radioso, nel rispetto della tua natura.
           </p>
         </section>
 
         <div className="mt-8 grid gap-8 md:grid-cols-2">
           <section className="card">
-            <h2 className="text-xl font-semibold text-brand">Cos’è</h2>
-            <p className="mt-2 text-gray-700">Un percorso personalizzato su aree specifiche, costruito dopo un breve colloquio iniziale.</p>
-          </section>
-          <section className="card">
-            <h2 className="text-xl font-semibold text-brand">Benefici principali</h2>
-            <ul className="mt-2 list-disc space-y-2 pl-6 text-gray-700">
-              <li>Sensazione di leggerezza e tonicità</li>
-              <li>Momento di cura e benessere per sé</li>
-              <li>Supporto agli obiettivi estetici personali</li>
-            </ul>
-          </section>
-          <section className="card md:col-span-2">
-            <h2 className="text-xl font-semibold text-brand">Come si svolge</h2>
+            <h2 className="text-xl font-semibold text-brand">Un’esperienza oltre la bellezza</h2>
             <p className="mt-2 text-gray-700">
-              Colloquio, preparazione della zona, applicazione di prodotti specifici e manualità dedicate. Durata media 50–60 minuti,
-              numero di incontri da concordare.
+              Ingredienti naturali, oli essenziali e principi attivi ALIUS attivano un’azione riequilibrante su corpo e mente. Riduce gli
+              inestetismi, migliora tono e compattezza, e dona un momento di profondo rilassamento.
             </p>
           </section>
           <section className="card">
-            <h2 className="text-xl font-semibold text-brand">Per chi è indicato</h2>
-            <p className="mt-2 text-gray-700">Adulti che desiderano prendersi cura di aree specifiche con un approccio non invasivo.</p>
+            <h2 className="text-xl font-semibold text-brand">Come funziona</h2>
+            <p className="mt-2 text-gray-700">
+              Inizia con una valutazione attenta della pelle. Poi, manovre dolci e precise, abbinate a prodotti mirati, nutrono in profondità e
+              stimolano la rigenerazione cutanea, liberando le tensioni e donando benessere totale.
+            </p>
+          </section>
+          <section className="card">
+            <h2 className="text-xl font-semibold text-brand">Per chi è pensato</h2>
+            <p className="mt-2 text-gray-700">
+              Indicato per chi desidera affrontare inestetismi come rilassamento cutaneo, irregolarità o secchezza con delicatezza. Perfetto per
+              ritrovare fiducia nel proprio corpo e sentirsi avvolti in un’esperienza di cura su misura.
+            </p>
           </section>
           <section className="card">
             <h2 className="text-xl font-semibold text-brand">Domande frequenti</h2>
             <div className="mt-2 grid gap-3">
-              <QA q="Sono necessari molti incontri?" a="Dipende dagli obiettivi: viene proposto un breve percorso personalizzato." />
-              <QA q="Posso abbinare attività fisica?" a="Sì, abitudini salutari e movimento favoriscono i risultati." />
+              <QA q="Quante sedute servono?" a="Dipende dall’obiettivo: si definisce un percorso personalizzato dopo la valutazione iniziale." />
+              <QA q="Posso proseguire con prodotti a casa?" a="Sì, possiamo consigliarti routine di mantenimento per proseguire i benefici." />
             </div>
           </section>
         </div>

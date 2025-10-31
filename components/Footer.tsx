@@ -10,7 +10,7 @@ export default function Footer() {
               <img src="/SanBonifacio_logo.png" alt="Logo Centro Riflessologia" className="h-10 w-10 object-cover" />
               <h3 className="text-lg font-semibold text-brand">Centro Riflessologia</h3>
             </div>
-            <p className="mt-2 text-sm text-gray-700">Paganotto Danya</p>
+            <p className="mt-2 text-sm text-gray-700">Paganotto Danya • Rieti Jessica</p>
             <p className="text-sm text-gray-700">Via Tombole, 168 – San Bonifacio (VR)</p>
           </div>
           <div>
@@ -26,7 +26,7 @@ export default function Footer() {
                 Email: <a className="underline" href="mailto:paganottodanya@gmail.com">paganottodanya@gmail.com</a>
               </li>
               <li>
-                IG: <a className="underline" href="https://instagram.com/centro_riflessologia" target="_blank" rel="noreferrer">@centro_riflessologia</a>
+                IG: <a className="underline" href="https://instagram.com/centro_riflessologia_sanbo" target="_blank" rel="noreferrer">@centro_riflessologia_sanbo</a>
               </li>
               <li>P.IVA 04891460232</li>
             </ul>

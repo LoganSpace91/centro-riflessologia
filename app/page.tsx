@@ -18,7 +18,7 @@ export default function HomePage() {
         subtitle="Ritrova equilibrio e benessere con il massaggio di riflessologia plantare: professionisti dei piedi a San Bonifacio (VR)."
         primary={{ label: 'Prenota su WhatsApp', href: 'https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20trattamento%20di%20riflessologia.' }}
         secondary={{ label: 'Chiama Danya', href: 'tel:+393494493683' }}
-        backgroundUrl="/images/zen-essential-oils.jpg"
+        backgroundUrl="/Piede_home.png"
         overlay="light"
       />
 
@@ -79,9 +79,17 @@ export default function HomePage() {
         <div className="container relative z-10 text-center">
           <h2 className="text-2xl font-semibold text-brand">Prenditi un momento per te</h2>
           <p className="mt-2 text-gray-700">Scrivimi e fissiamo insieme il tuo appuntamento.</p>
-          <div className="mt-6 flex justify-center gap-3">
-            <a className="btn btn-primary" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20appuntamento.">Prenota su WhatsApp</a>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20appuntamento.">Prenota su WhatsApp</a>
             <a className="btn btn-outline" href="tel:+393494493683">Chiama Danya</a>
+            <a
+              className="btn-instagram"
+              href="https://instagram.com/centro_riflessologia_sanbo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Scrivi su Instagram
+            </a>
           </div>
         </div>
       </section>

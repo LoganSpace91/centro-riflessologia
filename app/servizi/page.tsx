@@ -20,8 +20,8 @@ export default function ServiziPage() {
             titolo: 'Massaggio corpo con riflessologia plantare',
             descrizione:
               'Massaggio mirato ai punti riflessi dei piedi per favorire equilibrio e rilassamento.',
-            href: '/riflessologia-plantare',
-            immagineBackground: '/images/foot-massage-1.jpg',
+            href: '/servizi/massaggio-riflessologia-corpo',
+            immagineBackground: '/piede_2.jpg',
             prezzo: '50€',
           },
           {
@@ -38,7 +38,7 @@ export default function ServiziPage() {
             descrizione:
               'Trattamento delicato, mirato a zone specifiche. Ideale anche per i più piccoli.',
             href: '/servizi/massaggio-parziale-bambino',
-            immagineBackground: '/images/zen-essential-oils.jpg',
+            immagineBackground: '/Bambino_1.jpg',
             prezzo: '35€',
           },
           {
@@ -54,7 +54,7 @@ export default function ServiziPage() {
             descrizione:
               'Cura del viso rigenerante per ritrovare luminosità e benessere.',
             href: '/servizi/alius-viso-essere',
-            immagineBackground: '/images/water-ripples.jpg',
+            immagineBackground: '/faccia_1.jpeg',
             prezzo: '60€',
           },
           {
@@ -78,11 +78,19 @@ export default function ServiziPage() {
           <a className="ml-1 underline" href="mailto:paganottodanya@gmail.com">paganottodanya@gmail.com</a>.
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
-          <a className="btn btn-primary" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20informazioni%20e%20prenotare.">
+          <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20informazioni%20e%20prenotare.">
             Scrivi su WhatsApp
           </a>
           <a className="btn btn-outline" href="mailto:paganottodanya@gmail.com">
             Manda una mail
+          </a>
+          <a
+            className="btn-instagram"
+            href="https://instagram.com/centro_riflessologia_sanbo"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Chatta su Instagram
           </a>
         </div>
       </div>

@@ -3,8 +3,8 @@ import Hero from '@/components/Hero'
 export const metadata = {
   title: 'Trattamento viso “ESSERE” ALIUS',
   description:
-    'Cura del viso rigenerante con prodotti mirati: luminosità e benessere in armonia con la pelle.',
-  keywords: ['San Bonifacio', 'professionisti'],
+    'Percorso viso ALIUS: prodotti naturali, massaggio olistico e luminosità immediata per ogni tipo di pelle.',
+  keywords: ['Trattamento viso', 'San Bonifacio', 'professionisti'],
 }
 
 function QA({ q, a }: { q: string; a: string }) {
@@ -24,44 +24,49 @@ export default function Page() {
         subtitle="Un momento di cura e luminosità per la pelle del viso."
         primary={{ label: 'Prenota ora', href: 'https://wa.me/393494493683?text=ALIUS%20viso%20ESSERE' }}
         secondary={{ label: 'Chiama', href: 'tel:+393494493683' }}
-        backgroundUrl="/images/water-ripples.jpg"
+        backgroundUrl="/faccia_1.jpeg"
         overlay="light"
       />
 
       <div className="container py-12">
         <section className="card">
-          <h2 className="text-xl font-semibold text-brand">Introduzione</h2>
-          <p className="mt-2 text-gray-700">Trattamento viso riequilibrante e rigenerante con prodotti selezionati in base alla pelle.</p>
+          <h2 className="text-xl font-semibold text-brand">Un percorso di bellezza consapevole</h2>
+          <p className="mt-2 text-gray-700">
+            Il trattamento viso “ESSERE” ALIUS è pensato per nutrire, rigenerare e riequilibrare la pelle con ingredienti naturali e tecniche
+            delicate. Oltre all’estetica, valorizza la persona nella sua interezza attraverso una coccola personalizzata che favorisce drenaggio,
+            ossigenazione e rinnovamento cellulare.
+          </p>
         </section>
 
         <div className="mt-8 grid gap-8 md:grid-cols-2">
           <section className="card">
-            <h2 className="text-xl font-semibold text-brand">Cos’è</h2>
-            <p className="mt-2 text-gray-700">Una sequenza di detersione, applicazioni funzionali e massaggio rilassante del viso e del collo.</p>
-          </section>
-          <section className="card">
             <h2 className="text-xl font-semibold text-brand">Benefici principali</h2>
             <ul className="mt-2 list-disc space-y-2 pl-6 text-gray-700">
-              <li>Luminosità e idratazione</li>
-              <li>Rilassamento dei tratti del viso</li>
-              <li>Momento di benessere profondo</li>
+              <li>Riduce secchezza, tono irregolare e piccoli inestetismi</li>
+              <li>Dona luminosità, compattezza e una texture più levigata</li>
+              <li>Favorisce il drenaggio e l’ossigenazione, rilassando i tratti</li>
+              <li>Rigenera la vitalità del viso rispettando anche le pelli sensibili</li>
             </ul>
           </section>
-          <section className="card md:col-span-2">
+          <section className="card">
             <h2 className="text-xl font-semibold text-brand">Come si svolge</h2>
             <p className="mt-2 text-gray-700">
-              Colloquio iniziale, detersione, applicazione di prodotti e massaggio viso/collo. Durata media 50–60 minuti.
+              Si parte da un colloquio e da una detersione mirata. Seguono applicazioni detossinanti e idratanti con prodotti ALIUS, massaggio
+              dolce di viso e collo e una fase finale riequilibrante. La durata media è di 50–60 minuti.
             </p>
           </section>
           <section className="card">
             <h2 className="text-xl font-semibold text-brand">Per chi è indicato</h2>
-            <p className="mt-2 text-gray-700">Per chi desidera prendersi cura della pelle con un momento di relax rigenerante.</p>
+            <p className="mt-2 text-gray-700">
+              È adatto a tutti i tipi di pelle, anche le più sensibili. Ideale per chi desidera un’esperienza naturale, olistica e rispettosa
+              dell’equilibrio cutaneo.
+            </p>
           </section>
           <section className="card">
             <h2 className="text-xl font-semibold text-brand">Domande frequenti</h2>
             <div className="mt-2 grid gap-3">
-              <QA q="È adatto a pelli sensibili?" a="Sì, i prodotti vengono scelti in base alla sensibilità e alle esigenze." />
-              <QA q="Posso truccarmi dopo?" a="Meglio attendere qualche ora per beneficiare al massimo del trattamento." />
+              <QA q="Ogni quanto è consigliato?" a="Si può programmare un percorso mensile o stagionale in base alle esigenze della pelle." />
+              <QA q="Posso truccarmi dopo?" a="Meglio attendere qualche ora per permettere ai principi attivi di agire in profondità." />
             </div>
           </section>
         </div>

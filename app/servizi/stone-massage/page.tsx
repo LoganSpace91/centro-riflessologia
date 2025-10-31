@@ -30,41 +30,44 @@ export default function Page() {
 
       <div className="container py-12">
         <section className="card">
-          <h2 className="text-xl font-semibold text-brand">Introduzione</h2>
+          <h2 className="text-xl font-semibold text-brand">Cos’è il Stone Massage</h2>
           <p className="mt-2 text-gray-700">
-            Trattamento che utilizza pietre levigate riscaldate per accompagnare il massaggio e favorire un rilassamento profondo.
+            Il massaggio con pietre calde utilizza pietre di basalto vulcanico riscaldate tra 35 e 70°C per sciogliere le tensioni
+            muscolari. Le pietre vengono posizionate lungo la colonna, sui chakra o sulle zone doloranti, scivolando sulla pelle con oli
+            essenziali che amplificano l’effetto terapeutico.
           </p>
         </section>
 
         <div className="mt-8 grid gap-8 md:grid-cols-2">
           <section className="card">
-            <h2 className="text-xl font-semibold text-brand">Cos’è</h2>
-            <p className="mt-2 text-gray-700">Una tecnica avvolgente che integra il calore delle pietre con manualità dolci e lente.</p>
-          </section>
-          <section className="card">
             <h2 className="text-xl font-semibold text-brand">Benefici principali</h2>
             <ul className="mt-2 list-disc space-y-2 pl-6 text-gray-700">
-              <li>Decontrazione muscolare e scioglimento delle tensioni</li>
-              <li>Rilassamento profondo e sensazione di benessere</li>
-              <li>Stimolo alla circolazione</li>
+              <li>Rilassamento profondo di corpo e mente</li>
+              <li>Decontratturazione muscolare e miglioramento della circolazione</li>
+              <li>Riduzione di infiammazioni, dolori muscolari e articolari</li>
+              <li>Eliminazione delle tossine e pelle più levigata</li>
+              <li>Supporto contro stress, ansia, insonnia e stanchezza generale</li>
             </ul>
           </section>
-          <section className="card md:col-span-2">
+          <section className="card">
             <h2 className="text-xl font-semibold text-brand">Come si svolge</h2>
             <p className="mt-2 text-gray-700">
-              Colloquio iniziale, preparazione delle pietre, massaggio con integrazione del calore nelle aree necessarie. Durata media 50–60
-              minuti.
+              Il trattamento dura circa 60 minuti. Alterna pietre calde e fresche per stimolare la circolazione; il calore avvolge il corpo
+              mentre il massaggio con oli aromatici induce un profondo benessere fisico e mentale.
             </p>
           </section>
           <section className="card">
             <h2 className="text-xl font-semibold text-brand">Per chi è indicato</h2>
-            <p className="mt-2 text-gray-700">Adatto a chi desidera sciogliere tensioni e godere di un profondo relax.</p>
+            <p className="mt-2 text-gray-700">
+              Ideale per chi desidera sciogliere contratture, migliorare la circolazione e rilassarsi in modo naturale. Da evitare in caso di
+              problemi cardiaci, fragilità capillare, pelle molto sensibile, gravidanza o infiammazioni acute.
+            </p>
           </section>
           <section className="card">
             <h2 className="text-xl font-semibold text-brand">Domande frequenti</h2>
             <div className="mt-2 grid gap-3">
-              <QA q="Le pietre sono molto calde?" a="La temperatura è confortevole e sempre controllata dall’operatore." />
-              <QA q="Ci sono controindicazioni?" a="In caso di problematiche acute è consigliato rimandare e sentire il medico." />
+              <QA q="Le pietre sono molto calde?" a="La temperatura è sempre controllata per essere confortevole e sicura." />
+              <QA q="Quali oli vengono usati?" a="Oli essenziali naturali scelti in base alle tue esigenze per amplificare il beneficio." />
             </div>
           </section>
         </div>
