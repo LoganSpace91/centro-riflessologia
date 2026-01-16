@@ -1,4 +1,7 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import { getWhatsAppUrl } from '@/lib/constants'
+import MobileMenu from './MobileMenu'
 
 const nav = [
   { href: '/', label: 'Home' },
@@ -9,16 +12,20 @@ const nav = [
   { href: '/contatti', label: 'Contatti' },
 ]
 
+const bookingUrl = getWhatsAppUrl('Ciao Danya, vorrei prenotare un appuntamento.')
+
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-gray-100 bg-white/80 backdrop-blur">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-brand">
-          <img
+          <Image
             src="/SanBonifacio_logo.png"
             alt="Logo Centro Riflessologia"
-            className="h-8 w-8 rounded-sm object-cover"
-            loading="eager"
+            width={32}
+            height={32}
+            className="rounded-sm object-cover"
+            priority
           />
           <span className="text-lg font-semibold">Centro Riflessologia</span>
         </Link>
@@ -28,22 +35,12 @@ export default function Navbar() {
               {i.label}
             </Link>
           ))}
-          <a
-            className="btn btn-primary ml-2"
-            href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20appuntamento."
-          >
+          <a className="btn btn-primary ml-2" href={bookingUrl}>
             Prenota
           </a>
         </nav>
-        <a
-          className="btn btn-primary md:hidden"
-          href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20appuntamento."
-        >
-          Prenota
-        </a>
+        <MobileMenu bookingUrl={bookingUrl} />
       </div>
     </header>
   )
 }
-
-

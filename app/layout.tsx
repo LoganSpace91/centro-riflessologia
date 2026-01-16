@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Poppins, Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppFloatButton from '@/components/WhatsAppFloatButton'
 import { Analytics } from '@vercel/analytics/react'
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['600', '700'] })
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://centro-riflessologia.vercel.app'),
@@ -39,6 +38,42 @@ export const metadata: Metadata = {
   },
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HealthAndBeautyBusiness',
+  name: 'Centro Riflessologia — Paganotto Danya',
+  description: 'Trattamenti di riflessologia plantare e approccio olistico per il benessere a Verona e provincia.',
+  url: 'https://centro-riflessologia.vercel.app',
+  telephone: '+393494493683',
+  email: 'paganottodanya@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Via Tombole, 168',
+    addressLocality: 'San Bonifacio',
+    addressRegion: 'VR',
+    postalCode: '37047',
+    addressCountry: 'IT',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 45.3967,
+    longitude: 11.2689,
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '19:00',
+    },
+  ],
+  priceRange: '€€',
+  image: 'https://centro-riflessologia.vercel.app/SanBonifacio_logo.png',
+  sameAs: [
+    'https://instagram.com/centro_riflessologia_sanbo',
+  ],
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -46,6 +81,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${inter.className} text-gray-800`}>
         <a
           href="#maincontent"
@@ -53,7 +94,6 @@ export default function RootLayout({
         >
           Salta al contenuto
         </a>
-        <div className={`${poppins.className} sr-only`}>Centro Riflessologia</div>
         <Navbar />
         <main id="maincontent" className="min-h-[70vh]">{children}</main>
         <Footer />
@@ -63,5 +103,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-

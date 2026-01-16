@@ -1,4 +1,6 @@
 import MapEmbed from '@/components/MapEmbed'
+import ContactForm from '@/components/ContactForm'
+import { getWhatsAppUrl, WHATSAPP_BASE_URL, INSTAGRAM_URL, EMAIL, PHONE, ADDRESS } from '@/lib/constants'
 
 export const metadata = {
   title: 'Contatti',
@@ -16,22 +18,22 @@ export default function ContattiPage() {
           <ul className="mt-4 space-y-2 text-gray-700">
             <li>
               <span className="font-semibold">Telefono:</span>{' '}
-              <a className="underline" href="tel:+393494493683">+39 349 449 36 83</a>
+              <a className="underline" href={`tel:${PHONE.replace(/\s/g, '')}`}>{PHONE}</a>
             </li>
             <li>
               <span className="font-semibold">WhatsApp:</span>{' '}
-              <a className="underline" href="https://wa.me/393494493683">Scrivi su WhatsApp</a>
+              <a className="underline" href={WHATSAPP_BASE_URL}>Scrivi su WhatsApp</a>
             </li>
             <li>
               <span className="font-semibold">Email:</span>{' '}
-              <a className="underline" href="mailto:paganottodanya@gmail.com">paganottodanya@gmail.com</a>
+              <a className="underline" href={`mailto:${EMAIL}`}>{EMAIL}</a>
             </li>
             <li>
               <span className="font-semibold">Instagram:</span>{' '}
-              <a className="underline" href="https://instagram.com/centro_riflessologia_sanbo" target="_blank" rel="noreferrer">@centro_riflessologia_sanbo</a>
+              <a className="underline" href={INSTAGRAM_URL} target="_blank" rel="noreferrer">@centro_riflessologia_sanbo</a>
             </li>
             <li>
-              <span className="font-semibold">Indirizzo:</span> Via Tombole, 168 – San Bonifacio (VR)
+              <span className="font-semibold">Indirizzo:</span> {ADDRESS}
             </li>
             <li>
               <span className="font-semibold">P.IVA:</span> 04891460232
@@ -39,10 +41,10 @@ export default function ContattiPage() {
           </ul>
 
           <div className="mt-6 flex gap-3">
-            <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20appuntamento.">Prenota su WhatsApp</a>
+            <a className="btn-whatsapp" href={getWhatsAppUrl('Ciao Danya, vorrei prenotare un appuntamento.')}>Prenota su WhatsApp</a>
             <a
               className="btn-instagram"
-              href="https://instagram.com/centro_riflessologia_sanbo"
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
             >
@@ -54,8 +56,10 @@ export default function ContattiPage() {
           <MapEmbed />
         </div>
       </div>
+
+      <div className="mt-12">
+        <ContactForm />
+      </div>
     </div>
   )
 }
-
-

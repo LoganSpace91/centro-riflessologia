@@ -1,4 +1,6 @@
 import Hero from '@/components/Hero'
+import QA from '@/components/QA'
+import { getWhatsAppUrl, INSTAGRAM_URL } from '@/lib/constants'
 
 export const metadata = {
   title: 'Stone massage',
@@ -7,34 +9,25 @@ export const metadata = {
   keywords: ['Massaggio', 'San Bonifacio', 'professionisti'],
 }
 
-function QA({ q, a }: { q: string; a: string }) {
-  return (
-    <details className="rounded-lg border border-gray-200 p-4 [&_summary]:cursor-pointer">
-      <summary className="text-lg font-semibold text-brand">{q}</summary>
-      <p className="mt-2 text-gray-700">{a}</p>
-    </details>
-  )
-}
-
 export default function Page() {
   return (
     <>
       <Hero
         title="Stone massage"
         subtitle="Il calore delle pietre per sciogliere tensioni e ritrovare equilibrio."
-        primary={{ label: 'Prenota su WhatsApp', href: 'https://wa.me/393494493683?text=Prenotazione%20Stone%20massage', variant: 'whatsapp' }}
-        secondary={{ label: 'Scrivi su Instagram', href: 'https://instagram.com/centro_riflessologia_sanbo', variant: 'instagram' }}
+        primary={{ label: 'Prenota su WhatsApp', href: getWhatsAppUrl('Prenotazione Stone massage'), variant: 'whatsapp' }}
+        secondary={{ label: 'Scrivi su Instagram', href: INSTAGRAM_URL, variant: 'instagram' }}
         backgroundUrl="/hot-stone-massage-benefits.png"
         overlay="light"
       />
 
       <div className="container py-12">
         <section className="card">
-          <h2 className="text-xl font-semibold text-brand">Cos’è il Stone Massage</h2>
+          <h2 className="text-xl font-semibold text-brand">Cos'è il Stone Massage</h2>
           <p className="mt-2 text-gray-700">
             Il massaggio con pietre calde utilizza pietre di basalto vulcanico riscaldate tra 35 e 70°C per sciogliere le tensioni
             muscolari. Le pietre vengono posizionate lungo la colonna, sui chakra o sulle zone doloranti, scivolando sulla pelle con oli
-            essenziali che amplificano l’effetto terapeutico.
+            essenziali che amplificano l'effetto terapeutico.
           </p>
         </section>
 
@@ -80,11 +73,9 @@ export default function Page() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">
-          <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Prenotazione%20Stone%20massage">Prenota su WhatsApp</a>
+          <a className="btn-whatsapp" href={getWhatsAppUrl('Prenotazione Stone massage')}>Prenota su WhatsApp</a>
         </div>
       </div>
     </>
   )
 }
-
-

@@ -1,4 +1,6 @@
 import Hero from '@/components/Hero'
+import QA from '@/components/QA'
+import { getWhatsAppUrl, INSTAGRAM_URL } from '@/lib/constants'
 
 export const metadata = {
   title: 'Massaggio corpo con riflessologia plantare',
@@ -7,25 +9,14 @@ export const metadata = {
   keywords: ['Massaggio', 'Riflessologia', 'piedi', 'professionisti', 'San Bonifacio', 'Riflessologia plantare Verona'],
 }
 
-type QAProps = { q: string; a: string }
-
-function QA({ q, a }: QAProps) {
-  return (
-    <details className="rounded-lg border border-gray-200 p-4 [&_summary]:cursor-pointer">
-      <summary className="text-lg font-semibold text-brand">{q}</summary>
-      <p className="mt-2 text-gray-700">{a}</p>
-    </details>
-  )
-}
-
 export default function Page() {
   return (
     <>
       <Hero
         title="Massaggio corpo con riflessologia plantare"
         subtitle="Unisce manualità distensive e stimolazione dei punti riflessi del piede per riequilibrare tutto il corpo."
-        primary={{ label: 'Prenota su WhatsApp', href: 'https://wa.me/393494493683?text=Vorrei%20prenotare%20il%20massaggio%20corpo%20con%20riflessologia%20plantare', variant: 'whatsapp' }}
-        secondary={{ label: 'Scrivi su Instagram', href: 'https://instagram.com/centro_riflessologia_sanbo', variant: 'instagram' }}
+        primary={{ label: 'Prenota su WhatsApp', href: getWhatsAppUrl('Vorrei prenotare il massaggio corpo con riflessologia plantare'), variant: 'whatsapp' }}
+        secondary={{ label: 'Scrivi su Instagram', href: INSTAGRAM_URL, variant: 'instagram' }}
         backgroundUrl="/piede_2.jpg"
         overlay="light"
       />
@@ -34,7 +25,7 @@ export default function Page() {
         <section className="card">
           <h1 className="text-3xl font-bold text-brand">Massaggio corpo con riflessologia plantare</h1>
           <p className="mt-2 text-gray-700">
-            La riflessologia plantare è un’arte antica che ascolta il corpo partendo dai piedi. Attraverso un massaggio delicato ma
+            La riflessologia plantare è un'arte antica che ascolta il corpo partendo dai piedi. Attraverso un massaggio delicato ma
             profondo sui punti riflessi della pianta, il corpo ritrova il suo naturale equilibrio e un senso di rilassamento profondo. Ogni
             punto nei piedi corrisponde a un organo o a una parte del corpo, e stimolandoli si favorisce il benessere totale, riducendo le
             tensioni e rinvigorendo corpo e mente.
@@ -49,7 +40,7 @@ export default function Page() {
               <li>Migliora la circolazione, aiutando il corpo a rigenerarsi</li>
               <li>Allevia dolori muscolari e tensioni, riportando leggerezza</li>
               <li>Favorisce un sonno più profondo e rigenerante</li>
-              <li>Stimola le difese naturali dell’organismo</li>
+              <li>Stimola le difese naturali dell'organismo</li>
               <li>Dona una sensazione di armonia dentro e fuori</li>
             </ul>
           </section>
@@ -57,7 +48,7 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-brand">Come si svolge il massaggio</h2>
             <p className="mt-2 text-gray-700">
               Dopo un breve colloquio per comprendere le tue esigenze, il massaggiatore lavora con dolci pressioni e carezze sui piedi. Ogni
-              movimento è pensato per liberare l’energia e ristabilire l’equilibrio. La seduta dura circa 45 minuti e, già dalla prima, puoi
+              movimento è pensato per liberare l'energia e ristabilire l'equilibrio. La seduta dura circa 45 minuti e, già dalla prima, puoi
               percepire le tensioni sciogliersi.
             </p>
           </section>
@@ -91,16 +82,14 @@ export default function Page() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">
-        <a
-          className="btn-whatsapp"
-          href="https://wa.me/393494493683?text=Vorrei%20prenotare%20il%20massaggio%20corpo%20con%20riflessologia%20plantare"
-        >
-          Prenota su WhatsApp
-        </a>
+          <a
+            className="btn-whatsapp"
+            href={getWhatsAppUrl('Vorrei prenotare il massaggio corpo con riflessologia plantare')}
+          >
+            Prenota su WhatsApp
+          </a>
         </div>
       </div>
     </>
   )
 }
-
-

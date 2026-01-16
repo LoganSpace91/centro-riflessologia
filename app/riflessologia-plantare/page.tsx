@@ -1,3 +1,5 @@
+import { getWhatsAppUrl } from '@/lib/constants'
+
 export const metadata = {
   title: 'Riflessologia plantare — Massaggio piedi a San Bonifacio',
   description:
@@ -11,9 +13,9 @@ export default function RiflessologiaPlantarePage() {
       <h1 className="text-3xl font-bold text-brand">Riflessologia plantare</h1>
       <p className="mt-3 max-w-3xl text-gray-700">
         La riflessologia plantare è una tecnica di massaggio dolce e naturale che lavora sui punti riflessi situati nella pianta dei piedi.
-        Ogni zona del piede corrisponde a organi e aree del corpo: stimolandole con pressioni mirate, si favorisce l’autoguarigione e si
-        promuove l’equilibrio globale dell’organismo. È un approccio olistico che non tratta solo il sintomo ma accompagna la persona verso
-        un benessere psicofisico completo, disponibile nel nostro centro a San Bonifacio e in tutta l’area di Verona.
+        Ogni zona del piede corrisponde a organi e aree del corpo: stimolandole con pressioni mirate, si favorisce l'autoguarigione e si
+        promuove l'equilibrio globale dell'organismo. È un approccio olistico che non tratta solo il sintomo ma accompagna la persona verso
+        un benessere psicofisico completo, disponibile nel nostro centro a San Bonifacio e in tutta l'area di Verona.
       </p>
 
       <div className="mt-10 grid gap-8 md:grid-cols-2">
@@ -28,7 +30,7 @@ export default function RiflessologiaPlantarePage() {
         <section className="card">
           <h2 className="text-xl font-semibold text-brand">Come si svolge una seduta</h2>
           <p className="mt-3 text-gray-700">
-            Iniziamo con un breve colloquio per comprendere i tuoi bisogni. Ti accomodi su un lettino confortevole, avvolto da un’atmosfera
+            Iniziamo con un breve colloquio per comprendere i tuoi bisogni. Ti accomodi su un lettino confortevole, avvolto da un'atmosfera
             serena. Il terapeuta applica pressioni dolci e precise sui punti riflessi del piede, adattando la tecnica alle tue sensazioni. Al
             termine riceverai consigli personalizzati e, se necessario, la proposta di un percorso mirato.
           </p>
@@ -62,10 +64,8 @@ export default function RiflessologiaPlantarePage() {
       </div>
 
       <div className="mt-10 flex flex-wrap gap-3">
-        <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20una%20seduta%20di%20riflessologia.">Prenota su WhatsApp</a>
+        <a className="btn-whatsapp" href={getWhatsAppUrl('Ciao Danya, vorrei prenotare una seduta di riflessologia.')}>Prenota su WhatsApp</a>
       </div>
     </div>
   )
 }
-
-

@@ -1,20 +1,13 @@
 import Link from 'next/link'
 
 type Props = {
-  title?: string
-  description?: string
+  title: string
+  description: string
   backgroundUrl?: string
   href: string
-  titolo?: string
-  descrizione?: string
-  immagineBackground?: string
 }
 
-export default function ServiceCard(props: Props) {
-  const title = props.title ?? props.titolo ?? ''
-  const description = props.description ?? props.descrizione ?? ''
-  const backgroundUrl = props.backgroundUrl ?? props.immagineBackground
-  const href = props.href
+export default function ServiceCard({ title, description, backgroundUrl, href }: Props) {
 
   if (backgroundUrl) {
     return (

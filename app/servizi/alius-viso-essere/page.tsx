@@ -1,29 +1,22 @@
 import Hero from '@/components/Hero'
+import QA from '@/components/QA'
+import { getWhatsAppUrl, INSTAGRAM_URL } from '@/lib/constants'
 
 export const metadata = {
-  title: 'Trattamento viso “ESSERE” ALIUS',
+  title: 'Trattamento viso "ESSERE" ALIUS',
   description:
     'Percorso viso ALIUS: prodotti naturali, massaggio olistico e luminosità immediata per ogni tipo di pelle.',
   keywords: ['Trattamento viso', 'San Bonifacio', 'professionisti'],
-}
-
-function QA({ q, a }: { q: string; a: string }) {
-  return (
-    <details className="rounded-lg border border-gray-200 p-4 [&_summary]:cursor-pointer">
-      <summary className="text-lg font-semibold text-brand">{q}</summary>
-      <p className="mt-2 text-gray-700">{a}</p>
-    </details>
-  )
 }
 
 export default function Page() {
   return (
     <>
       <Hero
-        title="Trattamento viso “ESSERE” ALIUS"
+        title={'Trattamento viso "ESSERE" ALIUS'}
         subtitle="Un momento di cura e luminosità per la pelle del viso."
-        primary={{ label: 'Prenota su WhatsApp', href: 'https://wa.me/393494493683?text=ALIUS%20viso%20ESSERE', variant: 'whatsapp' }}
-        secondary={{ label: 'Scrivi su Instagram', href: 'https://instagram.com/centro_riflessologia_sanbo', variant: 'instagram' }}
+        primary={{ label: 'Prenota su WhatsApp', href: getWhatsAppUrl('ALIUS viso ESSERE'), variant: 'whatsapp' }}
+        secondary={{ label: 'Scrivi su Instagram', href: INSTAGRAM_URL, variant: 'instagram' }}
         backgroundUrl="/faccia_1.jpeg"
         overlay="light"
       />
@@ -32,8 +25,8 @@ export default function Page() {
         <section className="card">
           <h2 className="text-xl font-semibold text-brand">Un percorso di bellezza consapevole</h2>
           <p className="mt-2 text-gray-700">
-            Il trattamento viso “ESSERE” ALIUS è pensato per nutrire, rigenerare e riequilibrare la pelle con ingredienti naturali e tecniche
-            delicate. Oltre all’estetica, valorizza la persona nella sua interezza attraverso una coccola personalizzata che favorisce drenaggio,
+            Il trattamento viso "ESSERE" ALIUS è pensato per nutrire, rigenerare e riequilibrare la pelle con ingredienti naturali e tecniche
+            delicate. Oltre all'estetica, valorizza la persona nella sua interezza attraverso una coccola personalizzata che favorisce drenaggio,
             ossigenazione e rinnovamento cellulare.
           </p>
         </section>
@@ -44,7 +37,7 @@ export default function Page() {
             <ul className="mt-2 list-disc space-y-2 pl-6 text-gray-700">
               <li>Riduce secchezza, tono irregolare e piccoli inestetismi</li>
               <li>Dona luminosità, compattezza e una texture più levigata</li>
-              <li>Favorisce il drenaggio e l’ossigenazione, rilassando i tratti</li>
+              <li>Favorisce il drenaggio e l'ossigenazione, rilassando i tratti</li>
               <li>Rigenera la vitalità del viso rispettando anche le pelli sensibili</li>
             </ul>
           </section>
@@ -58,8 +51,8 @@ export default function Page() {
           <section className="card">
             <h2 className="text-xl font-semibold text-brand">Per chi è indicato</h2>
             <p className="mt-2 text-gray-700">
-              È adatto a tutti i tipi di pelle, anche le più sensibili. Ideale per chi desidera un’esperienza naturale, olistica e rispettosa
-              dell’equilibrio cutaneo.
+              È adatto a tutti i tipi di pelle, anche le più sensibili. Ideale per chi desidera un'esperienza naturale, olistica e rispettosa
+              dell'equilibrio cutaneo.
             </p>
           </section>
           <section className="card">
@@ -73,17 +66,15 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-brand">Durata e prezzo</h2>
             <p className="mt-2 text-gray-700">
               Il trattamento dura mediamente 50–60 minuti e ha un costo di <span className="font-semibold text-brand">60€</span>. Possiamo strutturare
-              pacchetti stagionali per mantenere la pelle vitale tutto l’anno.
+              pacchetti stagionali per mantenere la pelle vitale tutto l'anno.
             </p>
           </section>
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">
-          <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Prenotazione%20ALIUS%20viso%20ESSERE">Prenota su WhatsApp</a>
+          <a className="btn-whatsapp" href={getWhatsAppUrl('Prenotazione ALIUS viso ESSERE')}>Prenota su WhatsApp</a>
         </div>
       </div>
     </>
   )
 }
-
-

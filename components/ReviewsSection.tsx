@@ -1,6 +1,6 @@
 "use client"
+import Image from 'next/image'
 import Stars from './Stars'
-import CTAButton from './CTAButton'
 
 type Review = {
   name: string
@@ -112,7 +112,13 @@ export default function ReviewsSection() {
               <article key={i} className="relative w-[300px] shrink-0 overflow-hidden rounded-2xl bg-white p-5 shadow-card md:w-[420px]">
                 <div className="flex items-center gap-3">
                   <div className="relative h-12 w-12 overflow-hidden rounded-full ring-2 ring-amber-200">
-                    <img src={r.photo} alt="Foto utente sfocata" className="h-full w-full object-cover blur-sm" />
+                    <Image
+                      src={r.photo}
+                      alt="Foto utente"
+                      fill
+                      className="object-cover blur-sm"
+                      sizes="48px"
+                    />
                   </div>
                   <div>
                     <Stars rating={r.rating} />

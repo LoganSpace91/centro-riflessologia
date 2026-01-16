@@ -2,6 +2,7 @@ import Hero from '@/components/Hero'
 import ServiceCard from '@/components/ServiceCard'
 import MapEmbed from '@/components/MapEmbed'
 import ReviewsSection from '@/components/ReviewsSection'
+import { getWhatsAppUrl, INSTAGRAM_URL, ADDRESS } from '@/lib/constants'
 
 export const metadata = {
   title: 'Massaggio di riflessologia a San Bonifacio | Professionisti dei piedi',
@@ -16,8 +17,8 @@ export default function HomePage() {
       <Hero
         title="Parti dal piede per lavorare nel corpo"
         subtitle="Ritrova equilibrio e benessere con il massaggio di riflessologia plantare, anche a Verona e provincia."
-        primary={{ label: 'Prenota su WhatsApp', href: 'https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20trattamento%20di%20riflessologia.', variant: 'whatsapp' }}
-        secondary={{ label: 'Scrivi su Instagram', href: 'https://instagram.com/centro_riflessologia_sanbo', variant: 'instagram' }}
+        primary={{ label: 'Prenota su WhatsApp', href: getWhatsAppUrl('Ciao Danya, vorrei prenotare un trattamento di riflessologia.'), variant: 'whatsapp' }}
+        secondary={{ label: 'Scrivi su Instagram', href: INSTAGRAM_URL, variant: 'instagram' }}
         backgroundUrl="/Piede_home.png"
         overlay="light"
       />
@@ -48,7 +49,7 @@ export default function HomePage() {
           <h2 className="text-2xl font-semibold text-brand">Benefici che potresti percepire</h2>
           <ul className="mx-auto mt-6 grid list-disc gap-y-3 pl-6 text-left text-gray-700 md:grid-cols-2 md:gap-x-10 md:pl-8">
             <li>Rilassamento profondo: riduce stress e tensioni, favorendo calma generale</li>
-            <li>Miglioramento della qualità del sonno: contrasta l’insonnia e sostiene il riposo rigenerante</li>
+            <li>Miglioramento della qualità del sonno: contrasta l'insonnia e sostiene il riposo rigenerante</li>
             <li>Stimolazione della circolazione sanguigna: migliora il flusso nei piedi e nel corpo</li>
             <li>Eliminazione delle tossine: favorisce la depurazione tramite il sistema linfatico</li>
             <li>Equilibrio energetico: armonizza le funzioni degli organi e ristabilisce corpo-mente</li>
@@ -56,7 +57,7 @@ export default function HomePage() {
             <li>Miglioramento della digestione: stimola il sistema digerente e allevia gonfiori o stitichezza</li>
             <li>Supporto al sistema immunitario: aiuta a rafforzare le difese naturali</li>
             <li>Aumento della vitalità: dona benessere diffuso e più energia</li>
-            <li>Alleviamento dei disturbi emotivi: riduce l’ansia e favorisce un umore più positivo</li>
+            <li>Alleviamento dei disturbi emotivi: riduce l'ansia e favorisce un umore più positivo</li>
           </ul>
         </div>
       </section>
@@ -65,7 +66,7 @@ export default function HomePage() {
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div>
             <h2 className="text-2xl font-semibold text-brand">Dove siamo</h2>
-            <p className="mt-2 text-gray-700">Via Tombole, 168 – San Bonifacio (VR)</p>
+            <p className="mt-2 text-gray-700">{ADDRESS}</p>
             <div className="mt-4">
               <a
                 className="btn btn-primary"
@@ -91,10 +92,10 @@ export default function HomePage() {
           <h2 className="text-2xl font-semibold text-brand">Prenditi un momento per te</h2>
           <p className="mt-2 text-gray-700">Scrivimi e fissiamo insieme il tuo appuntamento.</p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <a className="btn-whatsapp" href="https://wa.me/393494493683?text=Ciao%20Danya%2C%20vorrei%20prenotare%20un%20appuntamento.">Prenota su WhatsApp</a>
+            <a className="btn-whatsapp" href={getWhatsAppUrl('Ciao Danya, vorrei prenotare un appuntamento.')}>Prenota su WhatsApp</a>
             <a
               className="btn-instagram"
-              href="https://instagram.com/centro_riflessologia_sanbo"
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
             >
@@ -106,5 +107,3 @@ export default function HomePage() {
     </>
   )
 }
-
-
