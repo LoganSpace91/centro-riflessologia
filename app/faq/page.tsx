@@ -2,14 +2,41 @@ import QA from '@/components/QA'
 import { getWhatsAppUrl, PHONE, EMAIL } from '@/lib/constants'
 
 export const metadata = {
-  title: 'Missione e FAQ',
+  title: 'Missione e FAQ — Domande frequenti',
   description:
-    'La missione del Centro Riflessologia e le risposte alle domande più frequenti su trattamenti, prenotazioni e approccio olistico.',
+    'Risposte alle domande più frequenti su riflessologia plantare, trattamenti, prenotazioni e approccio olistico. Centro Riflessologia a San Bonifacio (VR), Verona.',
+  keywords: ['FAQ', 'Domande frequenti', 'Riflessologia plantare', 'Trattamenti olistici', 'San Bonifacio', 'Verona'],
+}
+
+const faqItems = [
+  { q: 'Quanto dura una seduta?', a: 'In media 50–60 minuti, a seconda delle esigenze.' },
+  { q: 'Quante sedute servono?', a: 'È molto personale: dopo un primo incontro valuteremo insieme un eventuale percorso.' },
+  { q: 'La riflessologia fa male?', a: 'Le pressioni sono dolci e rispettose. Potresti avvertire sensibilità in alcuni punti, che gestiremo insieme.' },
+  { q: 'Ci sono controindicazioni?', a: 'In caso di condizioni acute o dubbi, è consigliato confrontarsi con il medico e rimandare il trattamento.' },
+  { q: 'Come posso prenotare?', a: `Scrivimi su WhatsApp al ${PHONE} o invia una mail a ${EMAIL}.` },
+  { q: 'Quali metodi di pagamento accetti?', a: 'Contanti e metodi digitali più comuni. Chiedi al momento della prenotazione.' },
+]
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
 }
 
 export default function FAQPage() {
   return (
     <div className="container py-14">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <section className="mx-auto max-w-4xl">
         <div
           className="relative mt-4 overflow-hidden rounded-3xl bg-cover bg-center shadow-card"
@@ -44,12 +71,9 @@ export default function FAQPage() {
       <section className="mx-auto mt-14 max-w-4xl">
         <h2 className="text-3xl font-bold text-brand">Domande frequenti</h2>
         <div className="mt-8 grid gap-4">
-          <QA q="Quanto dura una seduta?" a="In media 50–60 minuti, a seconda delle esigenze." />
-          <QA q="Quante sedute servono?" a="È molto personale: dopo un primo incontro valuteremo insieme un eventuale percorso." />
-          <QA q="La riflessologia fa male?" a="Le pressioni sono dolci e rispettose. Potresti avvertire sensibilità in alcuni punti, che gestiremo insieme." />
-          <QA q="Ci sono controindicazioni?" a="In caso di condizioni acute o dubbi, è consigliato confrontarsi con il medico e rimandare il trattamento." />
-          <QA q="Come posso prenotare?" a={`Scrivimi su WhatsApp al ${PHONE} o invia una mail a ${EMAIL}.`} />
-          <QA q="Quali metodi di pagamento accetti?" a="Contanti e metodi digitali più comuni. Chiedi al momento della prenotazione." />
+          {faqItems.map((item) => (
+            <QA key={item.q} q={item.q} a={item.a} />
+          ))}
         </div>
 
         <div className="mt-10">

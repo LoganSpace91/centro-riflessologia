@@ -12,10 +12,10 @@ export default function ServiceCard({ title, description, backgroundUrl, href }:
   if (backgroundUrl) {
     return (
       <div
-        className="group relative min-h-[260px] overflow-hidden rounded-2xl bg-cover bg-center shadow-card transition-transform hover:-translate-y-0.5 hover:shadow-lg"
+        className="group relative min-h-[220px] overflow-hidden rounded-2xl bg-cover bg-center shadow-card transition-transform hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.98] sm:min-h-[260px]"
         style={{ backgroundImage: `url(${backgroundUrl})` }}
       >
-        <div className="absolute inset-0 bg-white/65 transition group-hover:bg-white/55" aria-hidden />
+        <div className="absolute inset-0 bg-cream/70 transition group-hover:bg-cream/60" aria-hidden />
         <div className="relative z-10 flex h-full flex-col p-6">
           <div>
             <h3 className="text-xl font-semibold text-brand">{title}</h3>
@@ -33,7 +33,7 @@ export default function ServiceCard({ title, description, backgroundUrl, href }:
   }
 
   return (
-    <div className="card relative flex h-full flex-col transition-transform hover:-translate-y-0.5 hover:shadow-lg">
+    <div className="card relative flex h-full flex-col transition-transform hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.98]">
       <div>
         <h3 className="text-lg font-semibold text-brand">{title}</h3>
         <p className="mt-2 text-gray-700">{description}</p>

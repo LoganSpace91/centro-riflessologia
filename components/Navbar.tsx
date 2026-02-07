@@ -16,7 +16,7 @@ const bookingUrl = getWhatsAppUrl('Ciao Danya, vorrei prenotare un appuntamento.
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-gray-100 bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-40 w-full border-b border-surface bg-cream/80 backdrop-blur">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-brand">
           <Image

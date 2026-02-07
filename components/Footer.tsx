@@ -6,9 +6,9 @@ export default function Footer() {
   return (
     <footer className="mt-20 border-t border-gray-100 bg-surface/60">
       <div className="container py-10">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-8 text-center md:grid-cols-3 md:text-left">
           <div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center gap-2 md:justify-start">
               <Image
                 src="/SanBonifacio_logo.png"
                 alt="Logo Centro Riflessologia"
@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="text-sm font-semibold text-gray-900">Contatti</h4>
-            <ul className="mt-2 space-y-1 text-sm text-gray-700">
+            <ul className="mt-2 space-y-2 text-sm text-gray-700">
               <li>
                 Tel: <a className="underline" href={`tel:${PHONE.replace(/\s/g, '')}`}>{PHONE}</a>
               </li>
@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="text-sm font-semibold text-gray-900">Link utili</h4>
-            <ul className="mt-2 space-y-1 text-sm text-gray-700">
+            <ul className="mt-2 space-y-2 text-sm text-gray-700">
               <li>
                 <Link className="underline" href="/faq">
                   FAQ

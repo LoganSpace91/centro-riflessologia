@@ -19,6 +19,7 @@ const config: Config = {
         },
         muted: 'rgb(var(--muted) / <alpha-value>)',
         surface: 'rgb(var(--surface) / <alpha-value>)',
+        cream: 'rgb(var(--cream) / <alpha-value>)',
       },
       container: {
         center: true,
@@ -31,7 +32,7 @@ const config: Config = {
         },
       },
       boxShadow: {
-        card: '0 4px 24px rgba(0,0,0,0.08)',
+        card: '0 4px 24px rgba(80,60,40,0.08)',
       },
     },
   },

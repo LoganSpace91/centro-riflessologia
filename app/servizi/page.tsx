@@ -66,12 +66,12 @@ export default function ServiziPage() {
           Scrivimi su WhatsApp al <a className="underline" href={WHATSAPP_BASE_URL}>{PHONE}</a> o invia una mail a
           <a className="ml-1 underline" href={`mailto:${EMAIL}`}>{EMAIL}</a>.
         </p>
-        <div className="mt-4 flex flex-wrap gap-3">
-          <a className="btn-whatsapp" href={getWhatsAppUrl('Ciao Danya, vorrei informazioni e prenotare.')}>
+        <div className="mt-4 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap">
+          <a className="btn-whatsapp w-full text-center sm:w-auto" href={getWhatsAppUrl('Ciao Danya, vorrei informazioni e prenotare.')}>
             Scrivi su WhatsApp
           </a>
           <a
-            className="btn-instagram"
+            className="btn-instagram w-full text-center sm:w-auto"
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noreferrer"

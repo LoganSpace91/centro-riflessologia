@@ -3,9 +3,10 @@ import ContactForm from '@/components/ContactForm'
 import { getWhatsAppUrl, WHATSAPP_BASE_URL, INSTAGRAM_URL, EMAIL, PHONE, ADDRESS } from '@/lib/constants'
 
 export const metadata = {
-  title: 'Contatti',
+  title: 'Contatti — Prenota il tuo trattamento',
   description:
-    'Contatta il Centro Riflessologia: telefono, WhatsApp, email e indirizzo a San Bonifacio (VR).',
+    'Contatta il Centro Riflessologia a San Bonifacio (VR): telefono, WhatsApp, email e mappa. Prenota il tuo massaggio di riflessologia plantare a Verona e provincia.',
+  keywords: ['Contatti', 'Prenotazione', 'Riflessologia plantare', 'San Bonifacio', 'Verona', 'WhatsApp'],
 }
 
 export default function ContattiPage() {
@@ -40,10 +41,10 @@ export default function ContattiPage() {
             </li>
           </ul>
 
-          <div className="mt-6 flex gap-3">
-            <a className="btn-whatsapp" href={getWhatsAppUrl('Ciao Danya, vorrei prenotare un appuntamento.')}>Prenota su WhatsApp</a>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a className="btn-whatsapp w-full text-center sm:w-auto" href={getWhatsAppUrl('Ciao Danya, vorrei prenotare un appuntamento.')}>Prenota su WhatsApp</a>
             <a
-              className="btn-instagram"
+              className="btn-instagram w-full text-center sm:w-auto"
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"

@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'English Version Coming Soon',
+  robots: { index: false, follow: false },
 }
 
 export default function EnglishPlaceholder() {

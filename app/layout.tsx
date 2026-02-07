@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
@@ -7,6 +7,12 @@ import WhatsAppFloatButton from '@/components/WhatsAppFloatButton'
 import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://centro-riflessologia.vercel.app'),
@@ -32,9 +38,25 @@ export const metadata: Metadata = {
     url: 'https://centro-riflessologia.vercel.app',
     siteName: 'Centro Riflessologia',
     type: 'website',
+    locale: 'it_IT',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Centro Riflessologia — Trattamenti di riflessologia plantare a San Bonifacio (VR)',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Centro Riflessologia — Paganotto Danya',
+    description:
+      'Trattamenti di riflessologia plantare e approccio olistico per il benessere a Verona e provincia.',
+    images: ['/opengraph-image.png'],
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://centro-riflessologia.vercel.app',
   },
 }
 
@@ -72,6 +94,72 @@ const jsonLd = {
   sameAs: [
     'https://instagram.com/centro_riflessologia_sanbo',
   ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    reviewCount: '12',
+    bestRating: '5',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Servizi di riflessologia e benessere',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Massaggio corpo con riflessologia plantare',
+          description: 'Massaggio mirato ai punti riflessi dei piedi per favorire equilibrio e rilassamento.',
+          url: 'https://centro-riflessologia.vercel.app/servizi/massaggio-riflessologia-corpo',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Riflessologia plantare + impacco terapeutico',
+          description: 'Riflessologia dei piedi con applicazione di impacco: azione sinergica, profondo relax.',
+          url: 'https://centro-riflessologia.vercel.app/servizi/riflessologia-impacco',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Stone massage',
+          description: 'Massaggio con pietre calde per sciogliere tensioni e favorire il rilassamento.',
+          url: 'https://centro-riflessologia.vercel.app/servizi/stone-massage',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Trattamento corpo ALIUS',
+          description: 'Percorso dedicato agli inestetismi con tecniche dolci e prodotti mirati.',
+          url: 'https://centro-riflessologia.vercel.app/servizi/alius-corpo',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Trattamento viso ESSERE ALIUS',
+          description: 'Cura del viso rigenerante per ritrovare luminosità e benessere.',
+          url: 'https://centro-riflessologia.vercel.app/servizi/alius-viso-essere',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Massaggio parziale / bambino',
+          description: 'Trattamento delicato, mirato a zone specifiche. Ideale anche per i più piccoli.',
+          url: 'https://centro-riflessologia.vercel.app/servizi/massaggio-parziale-bambino',
+        },
+      },
+    ],
+  },
 }
 
 export default function RootLayout({

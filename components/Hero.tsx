@@ -20,7 +20,7 @@ export default function Hero({
   return (
     <section
       className={
-        `relative py-16 ${
+        `relative py-10 md:py-16 ${
           backgroundUrl
             ? 'bg-cover bg-center'
             : 'bg-gradient-to-b from-brand/5 to-transparent'
@@ -31,7 +31,7 @@ export default function Hero({
       {backgroundUrl ? (
         <div
           className={`absolute inset-0 ${
-            overlay === 'dark' ? 'bg-black/40' : 'bg-white/65'
+            overlay === 'dark' ? 'bg-black/40' : 'bg-cream/70'
           }`}
           aria-hidden="true"
         />
@@ -40,7 +40,7 @@ export default function Hero({
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-4xl font-bold text-brand md:text-5xl">{title}</h1>
           {subtitle ? <p className="mt-4 text-lg text-gray-700">{subtitle}</p> : null}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
             <CTAButton
               href={primary.href}
               label={primary.label}

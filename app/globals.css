@@ -8,9 +8,10 @@
   --brand-foreground: 255 255 255;
   /* Pesca tenue */
   --peach: 233 176 125; /* #E9B07D */
-  /* Neutri */
-  --muted: 107 114 128; /* #6B7280 */
-  --surface: 248 250 252; /* #F8FAFC */
+  /* Neutri caldi */
+  --muted: 120 110 100; /* #786E64 */
+  --surface: 240 232 222; /* #F0E8DE — sabbia calda */
+  --cream: 253 248 243; /* #FDF8F3 — crema calda */
 }
 
 html,
@@ -19,22 +20,22 @@ body {
 }
 
 body {
-  @apply bg-white text-gray-800 antialiased;
+  @apply bg-cream text-gray-800 antialiased;
 }
 
 /* Utility */
 .btn {
-  @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold transition-colors;
+  @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold transition-all;
 }
 .btn-primary {
-  @apply bg-brand text-white hover:bg-brand/90;
+  @apply bg-brand text-white hover:bg-brand/90 active:scale-[0.97] active:bg-brand/80;
 }
 .btn-outline {
-  @apply border border-brand text-brand hover:bg-brand/10;
+  @apply border border-brand text-brand hover:bg-brand/10 active:scale-[0.97] active:bg-brand/15;
 }
 
 .btn-whatsapp {
-  @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold text-white transition-colors;
+  @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold text-white transition-all active:scale-[0.97];
   background-color: #25D366;
 }
 .btn-whatsapp:hover {
@@ -42,7 +43,7 @@ body {
 }
 
 .btn-instagram {
-  @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold text-white transition-colors;
+  @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-semibold text-white transition-all active:scale-[0.97];
   background-image: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
 }
 .btn-instagram:hover {
@@ -50,7 +51,8 @@ body {
 }
 
 .card {
-  @apply rounded-xl bg-white p-6 shadow-card;
+  background-color: #FFFCF8;
+  @apply rounded-xl p-6 shadow-card;
 }
 
 /* Marquee animation for reviews */
@@ -68,6 +70,17 @@ body {
   gap: 1rem;
   width: max-content;
   animation: marquee-left 55s linear infinite;
+}
+
+.marquee:hover .marquee-track,
+.marquee:active .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 767px) {
+  .marquee-track {
+    animation-duration: 70s;
+  }
 }
 
 /* Scroll animations */
@@ -110,4 +123,25 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Safe-area support for notched devices */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
 
+/* WhatsApp button entrance animation */
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-float-in {
+  animation: float-in 0.5s ease-out 1s both;
+}

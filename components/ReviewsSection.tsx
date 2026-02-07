@@ -99,7 +99,7 @@ const reviews: Review[] = [
 export default function ReviewsSection() {
   const doubled = [...reviews, ...reviews]
   return (
-    <section className="bg-white py-14">
+    <section className="bg-surface/40 py-14">
       <div className="container">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-semibold text-brand">Cosa dicono i clienti</h2>
@@ -109,7 +109,7 @@ export default function ReviewsSection() {
         <div className="marquee relative mt-8">
           <div className="marquee-track">
             {doubled.map((r, i) => (
-              <article key={i} className="relative w-[300px] shrink-0 overflow-hidden rounded-2xl bg-white p-5 shadow-card md:w-[420px]">
+              <article key={i} className="relative w-[280px] shrink-0 overflow-hidden rounded-2xl p-4 shadow-card sm:w-[300px] md:w-[420px] md:p-5" style={{ backgroundColor: '#FFFCF8' }}>
                 <div className="flex items-center gap-3">
                   <div className="relative h-12 w-12 overflow-hidden rounded-full ring-2 ring-amber-200">
                     <Image
@@ -129,8 +129,8 @@ export default function ReviewsSection() {
               </article>
             ))}
           </div>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-white to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-white to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-surface/40 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-surface/40 to-transparent" />
         </div>
       </div>
     </section>

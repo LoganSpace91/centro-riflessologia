@@ -1,5 +1,6 @@
 "use client"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 const nav = [
@@ -13,6 +14,20 @@ const nav = [
 
 export default function MobileMenu({ bookingUrl }: { bookingUrl: string }) {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [isOpen])
+
+  useEffect(() => {
+    setIsOpen(false)
+  }, [pathname])
 
   return (
     <>
@@ -38,22 +53,44 @@ export default function MobileMenu({ bookingUrl }: { bookingUrl: string }) {
         </button>
       </div>
 
-      {isOpen && (
-        <div className="absolute left-0 right-0 top-16 border-b border-gray-100 bg-white shadow-lg md:hidden">
-          <nav className="container flex flex-col py-4">
-            {nav.map((i) => (
+      {/* Backdrop */}
+      <div
+        className={`fixed inset-0 top-16 z-30 bg-black/20 transition-opacity duration-300 md:hidden ${
+          isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
+        }`}
+        onClick={() => setIsOpen(false)}
+        aria-hidden="true"
+      />
+
+      {/* Menu panel */}
+      <div
+        className={`absolute left-0 right-0 top-16 z-40 border-b border-surface bg-cream shadow-lg transition-all duration-300 md:hidden ${
+          isOpen
+            ? 'translate-y-0 opacity-100'
+            : '-translate-y-2 pointer-events-none opacity-0'
+        }`}
+      >
+        <nav className="container flex flex-col py-4">
+          {nav.map((i) => {
+            const isActive = pathname === i.href ||
+              (i.href !== '/' && pathname.startsWith(i.href))
+            return (
               <Link
                 key={i.href}
                 href={i.href}
                 onClick={() => setIsOpen(false)}
-                className="py-3 text-gray-700 hover:text-brand"
+                className={`py-3 text-base transition-colors ${
+                  isActive
+                    ? 'font-semibold text-brand'
+                    : 'text-gray-700 active:text-brand'
+                }`}
               >
                 {i.label}
               </Link>
-            ))}
-          </nav>
-        </div>
-      )}
+            )
+          })}
+        </nav>
+      </div>
     </>
   )
 }

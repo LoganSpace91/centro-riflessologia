@@ -2,9 +2,10 @@ import Hero from '@/components/Hero'
 import { getWhatsAppUrl, INSTAGRAM_URL } from '@/lib/constants'
 
 export const metadata = {
-  title: 'Operatore olistico',
+  title: 'Operatore olistico — Approccio e metodo',
   description:
-    'Chi è e cosa fa un operatore olistico: approccio, metodo e ambiti del Centro Riflessologia a San Bonifacio (VR).',
+    'Chi è e cosa fa un operatore olistico: approccio, metodo e ambiti di intervento. Centro Riflessologia a San Bonifacio (VR), Verona e provincia.',
+  keywords: ['Operatore olistico', 'Benessere olistico', 'Riflessologia plantare', 'San Bonifacio', 'Verona', 'Trattamenti naturali'],
 }
 
 export default function OperatoreOlisticoPage() {
@@ -23,7 +24,7 @@ export default function OperatoreOlisticoPage() {
         className="relative bg-cover bg-center py-16"
         style={{ backgroundImage: 'url(/images/zen-essential-oils.jpg)' }}
       >
-        <div className="absolute inset-0 bg-white/75" aria-hidden />
+        <div className="absolute inset-0 bg-cream/80" aria-hidden />
         <div className="container relative z-10">
           <h1 className="text-3xl font-bold text-brand">Operatore olistico</h1>
           <p className="mt-3 max-w-3xl text-gray-700">

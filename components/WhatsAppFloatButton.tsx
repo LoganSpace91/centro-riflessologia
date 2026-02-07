@@ -4,7 +4,8 @@ export default function WhatsAppFloatButton() {
   return (
     <a
       href={getWhatsAppUrl('Ciao Danya, vorrei informazioni e prenotare.')}
-      className="fixed bottom-6 right-6 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition hover:bg-green-600"
+      className="animate-float-in fixed right-6 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition hover:bg-green-600"
+      style={{ bottom: 'max(1.5rem, env(safe-area-inset-bottom, 1.5rem))' }}
       aria-label="Scrivi su WhatsApp"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7">
