@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppFloatButton from '@/components/WhatsAppFloatButton'
+import MotionProvider from '@/components/motion/MotionProvider'
 import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
@@ -182,10 +183,12 @@ export default function RootLayout({
         >
           Salta al contenuto
         </a>
-        <Navbar />
-        <main id="maincontent" className="min-h-[70vh]">{children}</main>
-        <Footer />
-        <WhatsAppFloatButton />
+        <MotionProvider>
+          <Navbar />
+          <main id="maincontent" className="min-h-[70vh]">{children}</main>
+          <Footer />
+          <WhatsAppFloatButton />
+        </MotionProvider>
         <Analytics />
       </body>
     </html>

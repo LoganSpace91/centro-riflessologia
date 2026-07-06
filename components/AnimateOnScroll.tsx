@@ -1,41 +1,22 @@
 "use client"
-import { useEffect, useRef, type ReactNode } from 'react'
+import type { ReactNode } from 'react'
+import Reveal from './motion/Reveal'
 
 type Props = {
   children: ReactNode
   className?: string
+  /** Ritardo in millisecondi (retro-compatibile con l'uso precedente). */
   delay?: number
 }
 
+/**
+ * Compatibilità: mantiene l'API precedente ma delega a Motion (`Reveal`).
+ * `delay` resta in millisecondi come prima e viene convertito in secondi.
+ */
 export default function AnimateOnScroll({ children, className = '', delay = 0 }: Props) {
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const element = ref.current
-    if (!element) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add('is-visible')
-            }, delay)
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    )
-
-    observer.observe(element)
-
-    return () => observer.disconnect()
-  }, [delay])
-
   return (
-    <div ref={ref} className={`animate-on-scroll ${className}`}>
+    <Reveal className={className} delay={delay / 1000}>
       {children}
-    </div>
+    </Reveal>
   )
 }
