@@ -10,7 +10,7 @@ export const metadata = {
 export default function RiflessologiaPlantarePage() {
   return (
     <div className="container py-14">
-      <h1 className="text-3xl font-bold text-brand">Riflessologia plantare</h1>
+      <h1 className="font-display text-4xl font-semibold text-brand md:text-5xl">Riflessologia plantare</h1>
       <p className="mt-3 max-w-3xl text-gray-700">
         La riflessologia plantare è una tecnica di massaggio dolce e naturale che lavora sui punti riflessi situati nella pianta dei piedi.
         Ogni zona del piede corrisponde a organi e aree del corpo: stimolandole con pressioni mirate, si favorisce l'autoguarigione e si

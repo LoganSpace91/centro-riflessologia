@@ -12,7 +12,7 @@ export const metadata = {
 export default function ContattiPage() {
   return (
     <div className="container py-14">
-      <h1 className="text-3xl font-bold text-brand">Contatti</h1>
+      <h1 className="font-display text-4xl font-semibold text-brand md:text-5xl">Contatti</h1>
       <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
         <div className="card">
           <h2 className="text-xl font-semibold text-brand">Centro Riflessologia — Paganotto Danya</h2>
@@ -53,7 +53,7 @@ export default function ContattiPage() {
             </a>
           </div>
         </div>
-        <div className="overflow-hidden rounded-xl shadow-card">
+        <div className="overflow-hidden rounded-3xl shadow-card">
           <MapEmbed />
         </div>
       </div>

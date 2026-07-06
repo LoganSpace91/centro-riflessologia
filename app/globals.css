@@ -52,7 +52,35 @@ body {
 
 .card {
   background-color: #FFFCF8;
-  @apply rounded-xl p-6 shadow-card;
+  @apply rounded-2xl border border-black/5 p-6 shadow-card;
+}
+.card h2,
+.card h3,
+.card h4 {
+  @apply font-display;
+}
+
+/* Reveal allo scroll senza JS, come progressive enhancement.
+   Disattivato con reduced-motion e ignorato dai browser che non supportano
+   le animazioni legate allo scroll (i contenuti restano subito visibili). */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    @keyframes card-enter {
+      from {
+        opacity: 0;
+        transform: translateY(26px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .card {
+      animation: card-enter linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 45%;
+    }
+  }
 }
 
 /* Marquee animation for reviews */

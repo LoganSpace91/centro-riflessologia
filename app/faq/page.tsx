@@ -1,4 +1,6 @@
 import QA from '@/components/QA'
+import Reveal from '@/components/motion/Reveal'
+import { Stagger, StaggerItem } from '@/components/motion/Stagger'
 import { getWhatsAppUrl, PHONE, EMAIL } from '@/lib/constants'
 
 export const metadata = {
@@ -44,7 +46,7 @@ export default function FAQPage() {
         >
           <div className="absolute inset-0 bg-black/40" aria-hidden />
           <div className="relative space-y-4 p-8 leading-relaxed text-white sm:p-12">
-            <h1 className="text-3xl font-bold sm:text-4xl">La nostra missione</h1>
+            <h1 className="font-display text-3xl font-semibold sm:text-4xl">La nostra missione</h1>
             <p>
               Il Centro nasce dal sogno di Danya e Jessica, due anime sensibili che hanno voluto dimostrare che la bellezza esteriore non racconta mai
               tutta la verità. Il corpo è un libro aperto, ogni emozione vi lascia un segno, e quando sentimenti come dolore, rabbia o tristezza
@@ -68,13 +70,17 @@ export default function FAQPage() {
         </div>
       </section>
 
-      <section className="mx-auto mt-14 max-w-4xl">
-        <h2 className="text-3xl font-bold text-brand">Domande frequenti</h2>
-        <div className="mt-8 grid gap-4">
+      <section className="mx-auto mt-16 max-w-4xl">
+        <Reveal>
+          <h2 className="font-display text-3xl font-semibold text-brand md:text-4xl">Domande frequenti</h2>
+        </Reveal>
+        <Stagger className="mt-8 grid gap-4" staggerChildren={0.07} amount={0.1}>
           {faqItems.map((item) => (
-            <QA key={item.q} q={item.q} a={item.a} />
+            <StaggerItem key={item.q}>
+              <QA q={item.q} a={item.a} />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
 
         <div className="mt-10">
           <a
