@@ -26,7 +26,7 @@ export default function OperatoreOlisticoPage() {
       >
         <div className="absolute inset-0 bg-cream/80" aria-hidden />
         <div className="container relative z-10">
-          <h1 className="font-display text-4xl font-semibold text-brand md:text-5xl">Operatore olistico</h1>
+          <h2 className="font-display text-3xl font-semibold text-brand md:text-4xl">Un accompagnamento su misura</h2>
           <p className="mt-3 max-w-3xl text-gray-700">
             L'operatore olistico guida la persona verso il benessere globale considerando corpo, mente ed emozioni in modo integrato. Le tecniche
             sono dolci, non invasive e mirano a rilassamento, ascolto profondo e riequilibrio naturale.
