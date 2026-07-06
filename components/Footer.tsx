@@ -4,8 +4,9 @@ import { WHATSAPP_BASE_URL, INSTAGRAM_URL, EMAIL, PHONE, ADDRESS } from '@/lib/c
 
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t border-gray-100 bg-surface/60">
-      <div className="container py-10">
+    <footer className="mt-24 border-t border-peach/30 bg-surface/60">
+      <div className="h-1 w-full bg-gradient-to-r from-brand/40 via-peach/50 to-brand/40" aria-hidden />
+      <div className="container py-12">
         <div className="grid gap-8 text-center md:grid-cols-3 md:text-left">
           <div>
             <div className="flex items-center justify-center gap-2 md:justify-start">
@@ -14,15 +15,15 @@ export default function Footer() {
                 alt="Logo Centro Riflessologia"
                 width={40}
                 height={40}
-                className="object-cover"
+                className="rounded-sm object-cover"
               />
-              <h3 className="text-lg font-semibold text-brand">Centro Riflessologia</h3>
+              <h3 className="font-display text-lg font-semibold text-brand">Centro Riflessologia</h3>
             </div>
-            <p className="mt-2 text-sm text-gray-700">Paganotto Danya • Jessica Reiti</p>
+            <p className="mt-3 text-sm text-gray-700">Paganotto Danya • Jessica Reiti</p>
             <p className="text-sm text-gray-700">{ADDRESS}</p>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-gray-900">Contatti</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-brand/70">Contatti</h4>
             <ul className="mt-2 space-y-2 text-sm text-gray-700">
               <li>
                 Tel: <a className="underline" href={`tel:${PHONE.replace(/\s/g, '')}`}>{PHONE}</a>
@@ -40,7 +41,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-gray-900">Link utili</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-brand/70">Link utili</h4>
             <ul className="mt-2 space-y-2 text-sm text-gray-700">
               <li>
                 <Link className="underline" href="/faq">

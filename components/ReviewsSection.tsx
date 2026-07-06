@@ -1,12 +1,55 @@
 "use client"
 import Image from 'next/image'
+import { motion, useAnimationFrame, useMotionValue, useReducedMotion } from 'motion/react'
+import { useRef } from 'react'
 import Stars from './Stars'
+import Reveal from './motion/Reveal'
 
 type Review = {
   name: string
   text: string
   rating: number
   photo: string
+}
+
+/** Velocità di scorrimento del marquee, in px/secondo. */
+const SPEED = 45
+
+function Marquee({ children }: { children: React.ReactNode }) {
+  const x = useMotionValue(0)
+  const trackRef = useRef<HTMLDivElement>(null)
+  const halfWidth = useRef(0)
+  const paused = useRef(false)
+  const reduce = useReducedMotion()
+
+  useAnimationFrame((_, delta) => {
+    if (paused.current || reduce) return
+    const el = trackRef.current
+    if (!el) return
+    if (!halfWidth.current) halfWidth.current = el.scrollWidth / 2
+    const half = halfWidth.current
+    if (!half) return
+    let next = x.get() - (SPEED * delta) / 1000
+    if (next <= -half) next += half
+    x.set(next)
+  })
+
+  return (
+    <motion.div
+      ref={trackRef}
+      className="flex w-max cursor-grab gap-4 active:cursor-grabbing"
+      style={{ x }}
+      drag="x"
+      dragMomentum={false}
+      dragElastic={0}
+      onDragStart={() => (paused.current = true)}
+      onDragEnd={() => (paused.current = false)}
+      onPointerEnter={() => (paused.current = true)}
+      onPointerLeave={() => (paused.current = false)}
+    >
+      {children}
+    </motion.div>
+  )
 }
 
 const reviews: Review[] = [
@@ -99,26 +142,28 @@ const reviews: Review[] = [
 export default function ReviewsSection() {
   const doubled = [...reviews, ...reviews]
   return (
-    <section className="bg-surface/40 py-14">
+    <section className="bg-surface/40 py-16 md:py-20">
       <div className="container">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-semibold text-brand">Cosa dicono i clienti</h2>
-          <p className="mt-2 text-gray-700">Esperienze positive e reali: qualità del massaggio e benessere percepito.</p>
-        </div>
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-brand/60">Recensioni</p>
+          <h2 className="font-display text-3xl font-semibold text-brand md:text-4xl">Cosa dicono i clienti</h2>
+          <p className="mt-3 text-gray-700">Esperienze reali: qualità del massaggio e benessere percepito. Trascina per esplorare.</p>
+        </Reveal>
 
-        <div className="marquee relative mt-8">
-          <div className="marquee-track">
+        <div className="relative mt-10 overflow-hidden">
+          <Marquee>
             {doubled.map((r, i) => (
-              <article key={i} className="relative w-[280px] shrink-0 overflow-hidden rounded-2xl p-4 shadow-card sm:w-[300px] md:w-[420px] md:p-5" style={{ backgroundColor: '#FFFCF8' }}>
+              <article
+                key={i}
+                className="relative w-[280px] shrink-0 select-none overflow-hidden rounded-2xl border border-white/60 p-5 shadow-card sm:w-[320px] md:w-[420px]"
+                style={{ backgroundColor: '#FFFCF8' }}
+              >
+                <svg className="absolute right-4 top-3 text-peach/30" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.83v-6.83H5.6A3.6 3.6 0 0 1 9.2 7.6zm10 0A5.17 5.17 0 0 0 12 11.17V18h6.83v-6.83H15.6a3.6 3.6 0 0 1 3.6-3.57z" />
+                </svg>
                 <div className="flex items-center gap-3">
-                  <div className="relative h-12 w-12 overflow-hidden rounded-full ring-2 ring-amber-200">
-                    <Image
-                      src={r.photo}
-                      alt="Foto utente"
-                      fill
-                      className="object-cover blur-sm"
-                      sizes="48px"
-                    />
+                  <div className="relative h-12 w-12 overflow-hidden rounded-full ring-2 ring-peach/40">
+                    <Image src={r.photo} alt="Foto utente" fill className="object-cover blur-sm" sizes="48px" draggable={false} />
                   </div>
                   <div>
                     <Stars rating={r.rating} />
@@ -128,9 +173,9 @@ export default function ReviewsSection() {
                 <p className="mt-4 text-gray-800">“{r.text}”</p>
               </article>
             ))}
-          </div>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-surface/40 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-surface/40 to-transparent" />
+          </Marquee>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-surface/70 to-transparent md:w-20" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-surface/70 to-transparent md:w-20" />
         </div>
       </div>
     </section>

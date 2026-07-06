@@ -17,7 +17,10 @@ const variantClasses: Record<NonNullable<Props['variant']>, string> = {
 export default function CTAButton({ href, label, variant = 'primary', className }: Props) {
   const base = variantClasses[variant] ?? variantClasses.primary
   return (
-    <Link href={href} className={`${base} w-full text-center sm:w-auto ${className ?? ''}`.trim()}>
+    <Link
+      href={href}
+      className={`${base} w-full text-center shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg sm:w-auto ${className ?? ''}`.trim()}
+    >
       {label}
     </Link>
   )
