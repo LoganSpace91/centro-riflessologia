@@ -21,6 +21,10 @@ const config: Config = {
         surface: 'rgb(var(--surface) / <alpha-value>)',
         cream: 'rgb(var(--cream) / <alpha-value>)',
       },
+      fontFamily: {
+        sans: ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['var(--font-fraunces)', 'Georgia', 'Cambria', 'serif'],
+      },
       container: {
         center: true,
         padding: {

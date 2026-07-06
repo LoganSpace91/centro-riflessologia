@@ -1,13 +1,19 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Fraunces } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppFloatButton from '@/components/WhatsAppFloatButton'
 import MotionProvider from '@/components/motion/MotionProvider'
 import { Analytics } from '@vercel/analytics/react'
 
-const inter = Inter({ subsets: ['latin'], display: 'swap' })
+const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' })
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-fraunces',
+  axes: ['opsz', 'SOFT'],
+})
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -176,7 +182,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.className} text-gray-800`}>
+      <body className={`${inter.variable} ${fraunces.variable} font-sans text-gray-800`}>
         <a
           href="#maincontent"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-brand focus:shadow"
