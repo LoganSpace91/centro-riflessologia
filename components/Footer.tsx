@@ -44,6 +44,11 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-brand/70">Link utili</h4>
             <ul className="mt-2 space-y-2 text-sm text-gray-700">
               <li>
+                <Link className="underline" href="/approfondimenti">
+                  Approfondimenti
+                </Link>
+              </li>
+              <li>
                 <Link className="underline" href="/faq">
                   FAQ
                 </Link>

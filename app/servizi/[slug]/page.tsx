@@ -7,6 +7,7 @@ import CheckItem from '@/components/CheckItem'
 import ServiceCard from '@/components/ServiceCard'
 import Reveal from '@/components/motion/Reveal'
 import { SERVICES, getService } from '@/lib/services'
+import { ARTICLES } from '@/lib/articles'
 import { getWhatsAppUrl, INSTAGRAM_URL } from '@/lib/constants'
 
 type Params = { params: { slug: string } }
@@ -31,6 +32,7 @@ export default function ServicePage({ params }: Params) {
   const wa = getWhatsAppUrl(s.waMessage)
   const i = SERVICES.indexOf(s)
   const others = [1, 2].map((n) => SERVICES[(i + n) % SERVICES.length])
+  const articles = ARTICLES.filter((a) => a.service === s.slug)
 
   return (
     <>
@@ -94,6 +96,22 @@ export default function ServicePage({ params }: Params) {
               ))}
             </div>
           </section>
+
+          {articles.length ? (
+            <section>
+              <h2 className={h2}>Approfondimenti</h2>
+              <ul className="mt-6 grid gap-3">
+                {articles.map((a) => (
+                  <li key={a.slug}>
+                    <Link href={`/approfondimenti/${a.slug}`} className="card block !p-5 transition hover:-translate-y-0.5">
+                      <span className="font-display text-lg font-semibold text-brand">{a.title}</span>
+                      <span className="mt-1 block text-gray-600">{a.description}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
         </div>
 
         <aside className="lg:sticky lg:top-24 lg:self-start">
