@@ -9,8 +9,6 @@ import MobileMenu from './MobileMenu'
 const nav = [
   { href: '/', label: 'Home' },
   { href: '/servizi', label: 'Servizi' },
-  { href: '/riflessologia-plantare', label: 'Riflessologia' },
-  { href: '/operatore-olistico', label: 'Operatore olistico' },
   { href: '/faq', label: 'FAQ' },
   { href: '/contatti', label: 'Contatti' },
 ]
@@ -37,7 +35,7 @@ export default function Navbar() {
       }`}
     >
       <div
-        className={`container flex items-center justify-between transition-all duration-300 ${
+        className={`container flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr] transition-all duration-300 ${
           scrolled ? 'h-14' : 'h-16'
         }`}
       >
@@ -52,7 +50,7 @@ export default function Navbar() {
           />
           <span className="font-display text-lg font-semibold">Centro Riflessologia</span>
         </Link>
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center justify-center gap-8 md:flex">
           {nav.map((i) => {
             const active = i.href === '/' ? pathname === '/' : pathname.startsWith(i.href)
             return (
@@ -71,10 +69,13 @@ export default function Navbar() {
               </Link>
             )
           })}
-          <a className="btn btn-primary ml-2" href={bookingUrl}>
+        </nav>
+        {/* Wrapper: .btn non è in un @layer e sovrascriverebbe `hidden`. */}
+        <div className="hidden justify-self-end md:block">
+          <a className="btn btn-primary" href={bookingUrl}>
             Prenota
           </a>
-        </nav>
+        </div>
         <MobileMenu bookingUrl={bookingUrl} />
       </div>
     </header>

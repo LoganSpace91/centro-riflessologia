@@ -114,7 +114,7 @@ export const SERVICES: Service[] = [
       'Un accompagnamento dolce per la coppia che desidera un figlio e per la mamma in attesa: rilassamento profondo, ascolto ed equilibrio emotivo.',
     cardTitle: 'Riflessologia per fertilità e gravidanza',
     cardDescription: 'Percorso di sostegno per la coppia in ricerca di una gravidanza e per la mamma in attesa.',
-    image: '/images/foot-massage-1.jpg',
+    image: '/images/gravidanza-pancia.jpg',
     metaTitle: 'Riflessologia plantare per fertilità e gravidanza a San Bonifacio (VR)',
     description:
       'Studio di riflessologia a San Bonifacio (VR): percorsi di riflessologia plantare per la coppia in ricerca di una gravidanza e per la mamma in attesa. Rilassamento, ascolto ed equilibrio emotivo.',
@@ -175,7 +175,7 @@ export const SERVICES: Service[] = [
       'Per runner e sportivi amatoriali: prepara il corpo e la testa alla gara e aiuta a recuperare dopo, senza restare bloccati.',
     cardTitle: 'Massaggio sportivo emozionale',
     cardDescription: 'Pre e post gara per runner e maratoneti amatoriali: tensioni muscolari ed equilibrio emotivo.',
-    image: '/images/water-ripples.jpg',
+    image: '/images/massaggio-sportivo-gambe.jpg',
     metaTitle: 'Massaggio sportivo pre e post gara per runner a San Bonifacio (VR)',
     description:
       'Massaggio sportivo emozionale a San Bonifacio (VR) per runner e maratoneti amatoriali: trattamenti pre gara e post gara per sciogliere tensioni, recuperare e affrontare la gara con la testa giusta.',

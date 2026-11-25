@@ -6,8 +6,6 @@ import Link from 'next/link'
 const nav = [
   { href: '/', label: 'Home' },
   { href: '/servizi', label: 'Servizi' },
-  { href: '/riflessologia-plantare', label: 'Riflessologia' },
-  { href: '/operatore-olistico', label: 'Operatore olistico' },
   { href: '/faq', label: 'FAQ' },
   { href: '/contatti', label: 'Contatti' },
 ]

@@ -30,7 +30,7 @@ export const ARTICLES: Article[] = [
       'runner San Bonifacio',
     ],
     date: '2026-11-25',
-    image: '/images/water-ripples.jpg',
+    image: '/images/runner-gara-gambe.jpg',
     service: 'massaggio-sportivo-emozionale',
     intro:
       'Chilometro 30, il ritmo tiene, e all’improvviso il polpaccio si blocca. Chi corre la maratona o la mezza lo sa: il crampo arriva quando meno te lo aspetti, spesso anche se hai preso magnesio e potassio per giorni. Ecco perché succede e cosa puoi fare, prima, durante e dopo la gara.',
