@@ -13,9 +13,9 @@ export default function Footer() {
               <Image
                 src="/SanBonifacio_logo.png"
                 alt="Logo Centro Riflessologia"
-                width={40}
+                width={55}
                 height={40}
-                className="rounded-sm object-cover"
+                className="h-auto rounded-sm"
               />
               <h3 className="font-display text-lg font-semibold text-brand">Centro Riflessologia</h3>
             </div>

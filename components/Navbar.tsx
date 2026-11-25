@@ -45,9 +45,9 @@ export default function Navbar() {
           <Image
             src="/SanBonifacio_logo.png"
             alt="Logo Centro Riflessologia"
-            width={32}
+            width={44}
             height={32}
-            className="rounded-sm object-cover"
+            className="h-auto rounded-sm"
             priority
           />
           <span className="font-display text-lg font-semibold">Centro Riflessologia</span>

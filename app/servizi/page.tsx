@@ -1,6 +1,7 @@
 import ServiceCard from '@/components/ServiceCard'
 import Reveal from '@/components/motion/Reveal'
 import { Stagger, StaggerItem } from '@/components/motion/Stagger'
+import { SERVICES } from '@/lib/services'
 import { getWhatsAppUrl, WHATSAPP_BASE_URL, INSTAGRAM_URL, EMAIL, PHONE } from '@/lib/constants'
 
 export const metadata = {
@@ -9,45 +10,6 @@ export const metadata = {
     'Servizi del Centro Riflessologia: massaggio di riflessologia plantare per i piedi e trattamenti olistici personalizzati a San Bonifacio, eseguiti da professionisti.',
   keywords: ['Massaggio', 'Riflessologia', 'piedi', 'professionisti', 'San Bonifacio'],
 }
-
-const servizi = [
-  {
-    title: 'Massaggio corpo con riflessologia plantare',
-    description: 'Massaggio mirato ai punti riflessi dei piedi per favorire equilibrio e rilassamento.',
-    href: '/servizi/massaggio-riflessologia-corpo',
-    backgroundUrl: '/piede_2.jpg',
-  },
-  {
-    title: 'Massaggio corpo con riflessologia plantare + impacco terapeutico',
-    description: 'Riflessologia dei piedi con applicazione di impacco: azione sinergica, profondo relax.',
-    href: '/servizi/riflessologia-impacco',
-    backgroundUrl: '/images/foot-massage-2.jpg',
-  },
-  {
-    title: 'Massaggio corpo parziale / bambino',
-    description: 'Trattamento delicato, mirato a zone specifiche. Ideale anche per i più piccoli.',
-    href: '/servizi/massaggio-parziale-bambino',
-    backgroundUrl: '/Bambino_1.jpg',
-  },
-  {
-    title: 'Trattamento corpo per inestetismo ALIUS',
-    description: 'Percorso dedicato agli inestetismi con tecniche dolci e prodotti mirati.',
-    href: '/servizi/alius-corpo',
-    backgroundUrl: '/images/bamboo-leaves.jpg',
-  },
-  {
-    title: 'Trattamento viso "ESSERE" ALIUS',
-    description: 'Cura del viso rigenerante per ritrovare luminosità e benessere.',
-    href: '/servizi/alius-viso-essere',
-    backgroundUrl: '/faccia_1.jpeg',
-  },
-  {
-    title: 'Stone massage',
-    description: 'Massaggio con pietre calde per sciogliere tensioni e favorire il rilassamento.',
-    href: '/servizi/stone-massage',
-    backgroundUrl: '/hot-stone-massage-benefits.png',
-  },
-]
 
 export default function ServiziPage() {
   return (
@@ -60,9 +22,9 @@ export default function ServiziPage() {
         </p>
       </Reveal>
       <Stagger className="mt-10 grid gap-6 md:grid-cols-2" staggerChildren={0.08} amount={0.05}>
-        {servizi.map((s) => (
-          <StaggerItem key={s.title} className="h-full">
-            <ServiceCard {...s} />
+        {SERVICES.map((s) => (
+          <StaggerItem key={s.slug} className="h-full">
+            <ServiceCard title={s.cardTitle} description={s.cardDescription} href={`/servizi/${s.slug}`} backgroundUrl={s.image} />
           </StaggerItem>
         ))}
       </Stagger>

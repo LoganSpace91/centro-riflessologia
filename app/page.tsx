@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero'
 import FeatureCard from '@/components/FeatureCard'
+import CheckItem from '@/components/CheckItem'
 import MapEmbed from '@/components/MapEmbed'
 import ReviewsSection from '@/components/ReviewsSection'
 import Reveal from '@/components/motion/Reveal'
@@ -35,8 +36,8 @@ export default function HomePage() {
         subtitle="Ritrova equilibrio e benessere con il massaggio di riflessologia plantare, anche a Verona e provincia."
         primary={{ label: 'Prenota su WhatsApp', href: getWhatsAppUrl('Ciao Danya, vorrei prenotare un trattamento di riflessologia.'), variant: 'whatsapp' }}
         secondary={{ label: 'Scrivi su Instagram', href: INSTAGRAM_URL, variant: 'instagram' }}
-        backgroundUrl="/Piede_home.png"
-        overlay="light"
+        imageUrl="/Piede_home.png"
+        badge={{ value: '4,8 ★', label: 'media di 12 recensioni' }}
       />
 
       {/* Servizi principali */}
@@ -82,17 +83,10 @@ export default function HomePage() {
           <Stagger className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-3" staggerChildren={0.06} amount={0.1}>
             {benefits.map((b) => (
               <StaggerItem key={b.title} className="h-full">
-                <div className="flex h-full items-start gap-3 rounded-2xl border border-white/60 bg-cream/85 p-4 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md">
-                  <span className="mt-0.5 flex h-7 w-7 flex-none items-center justify-center rounded-full bg-peach/20 text-brand" aria-hidden>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                      <path d="M20 6 9 17l-5-5" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                  <div>
-                    <p className="font-semibold text-brand">{b.title}</p>
-                    <p className="mt-0.5 text-sm text-gray-700">{b.desc}</p>
-                  </div>
-                </div>
+                <CheckItem className="h-full rounded-2xl border border-white/60 bg-cream/85 p-4 shadow-sm backdrop-blur-sm transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md">
+                  <p className="font-semibold text-brand">{b.title}</p>
+                  <p className="mt-0.5 text-sm text-gray-700">{b.desc}</p>
+                </CheckItem>
               </StaggerItem>
             ))}
           </Stagger>

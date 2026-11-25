@@ -16,8 +16,7 @@ export default function OperatoreOlisticoPage() {
         subtitle="Ascolto, empatia e competenza: un accompagnamento dolce verso il benessere globale."
         primary={{ label: 'Scrivi su WhatsApp', href: getWhatsAppUrl('Ciao Danya, vorrei informazioni sull\'approccio olistico'), variant: 'whatsapp' }}
         secondary={{ label: 'Tutti i contatti', href: '/contatti' }}
-        backgroundUrl="/images/bamboo-leaves.jpg"
-        overlay="light"
+        imageUrl="/images/bamboo-leaves.jpg"
       />
 
       <section

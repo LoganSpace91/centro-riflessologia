@@ -13,7 +13,7 @@ type Props = {
 
 /**
  * Titolo che entra parola per parola in cascata (slide-up con mascheratura).
- * Il testo completo resta nel DOM (via `aria-label`) per accessibilità e SEO.
+ * Spazi veri tra le parole: il testo resta leggibile per screen reader, SEO e copia-incolla.
  * Con reduced-motion attivo, `MotionConfig` neutralizza gli spostamenti: le parole
  * appaiono semplicemente in dissolvenza.
  */
@@ -24,27 +24,24 @@ export default function KineticHeading({ text, className, as = 'h1', delay = 0 }
   return (
     <Tag
       className={className}
-      aria-label={text}
       initial="hidden"
       animate="show"
       variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08, delayChildren: delay } } }}
     >
       {words.map((word, i) => (
-        <span
-          key={`${word}-${i}`}
-          aria-hidden="true"
-          className="inline-block overflow-hidden align-top"
-          style={{ marginRight: '0.25em', paddingBottom: '0.12em' }}
-        >
-          <motion.span
-            className="inline-block"
-            variants={{
-              hidden: { y: '110%' },
-              show: { y: 0, transition: { duration: 0.7, ease: EASE } },
-            }}
-          >
-            {word}
-          </motion.span>
+        <span key={`${word}-${i}`}>
+          {i > 0 ? ' ' : null}
+          <span className="inline-block overflow-hidden align-top" style={{ paddingBottom: '0.12em' }}>
+            <motion.span
+              className="inline-block"
+              variants={{
+                hidden: { y: '110%' },
+                show: { y: 0, transition: { duration: 0.7, ease: EASE } },
+              }}
+            >
+              {word}
+            </motion.span>
+          </span>
         </span>
       ))}
     </Tag>
