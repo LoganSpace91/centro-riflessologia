@@ -108,6 +108,128 @@ export const SERVICES: Service[] = [
     ],
   },
   {
+    slug: 'riflessologia-fertilita-gravidanza',
+    title: 'Riflessologia per fertilità e gravidanza',
+    subtitle:
+      'Un accompagnamento dolce per la coppia che desidera un figlio e per la mamma in attesa: rilassamento profondo, ascolto ed equilibrio emotivo.',
+    cardTitle: 'Riflessologia per fertilità e gravidanza',
+    cardDescription: 'Percorso di sostegno per la coppia in ricerca di una gravidanza e per la mamma in attesa.',
+    image: '/images/foot-massage-1.jpg',
+    metaTitle: 'Riflessologia plantare per fertilità e gravidanza a San Bonifacio (VR)',
+    description:
+      'Studio di riflessologia a San Bonifacio (VR): percorsi di riflessologia plantare per la coppia in ricerca di una gravidanza e per la mamma in attesa. Rilassamento, ascolto ed equilibrio emotivo.',
+    keywords: [
+      'riflessologia fertilità',
+      'riflessologia gravidanza',
+      'riflessologia plantare fertilità Verona',
+      'ricerca gravidanza',
+      'studio di riflessologia San Bonifacio',
+    ],
+    waMessage: 'Ciao Danya, vorrei informazioni sul percorso di riflessologia per fertilità e gravidanza',
+    duration: 'Percorso su misura',
+    price: 'Su richiesta',
+    priceNote: 'Il percorso si definisce dopo un primo colloquio conoscitivo, anche di coppia.',
+    about: [
+      {
+        heading: 'Quando il corpo è pronto, ma il bambino non arriva',
+        text: 'Capita spesso: gli esami sono a posto, mamma e papà stanno bene, eppure la gravidanza tarda ad arrivare. L’attesa, i tentativi e le aspettative possono creare tensione, stanchezza e un carico emotivo che pesa su entrambi. La riflessologia plantare offre uno spazio per rallentare, scaricare lo stress e ritrovare fiducia nel proprio corpo.',
+      },
+      {
+        heading: 'Un percorso per la coppia, non solo per la donna',
+        text: 'La ricerca di un figlio riguarda entrambi i partner. Per questo il percorso può coinvolgere anche il papà: lavorare insieme sul rilassamento e sull’equilibrio emotivo aiuta la coppia a vivere questo momento con più serenità. Lo stesso approccio, con manualità adattate, accompagna la donna durante la gravidanza.',
+      },
+    ],
+    benefits: {
+      title: 'Cosa può offrirti il percorso',
+      items: [
+        'Rilassamento profondo e riduzione dello stress legato all’attesa',
+        'Uno spazio di ascolto per affrontare ansia e pressione emotiva',
+        'Sostegno al riposo e alla qualità del sonno',
+        'Maggiore consapevolezza e fiducia nel proprio corpo',
+        'Un momento di cura condiviso per la coppia',
+        'Accompagnamento delicato durante i mesi della gravidanza',
+      ],
+    },
+    how: 'Si inizia con un colloquio, anche di coppia, per conoscere la vostra storia e il momento che state vivendo. Le sedute di riflessologia plantare vengono poi calibrate sulla persona: manualità dolci sui punti riflessi, tempi rispettosi e attenzione all’aspetto emotivo. La frequenza degli incontri si concorda insieme.',
+    forWho:
+      'Per le coppie che desiderano un figlio, anche durante percorsi di procreazione assistita, e per le donne in gravidanza che cercano un momento di rilassamento e cura di sé. Il percorso è complementare e non sostituisce in alcun modo le indicazioni del ginecologo o del centro che vi segue.',
+    faq: [
+      {
+        q: 'Può sostituire le cure mediche?',
+        a: 'No. La riflessologia è un trattamento olistico di benessere e rilassamento: affianca, senza sostituirlo, il percorso con il tuo medico o il centro di fertilità.',
+      },
+      {
+        q: 'Può partecipare anche il partner?',
+        a: 'Sì, anzi è consigliato: il percorso può essere pensato per entrambi, con sedute individuali o in momenti condivisi.',
+      },
+      {
+        q: 'Si può fare durante la gravidanza?',
+        a: 'Sì, con manualità adattate. Valutiamo insieme il momento più adatto, sempre in accordo con il tuo ginecologo o la tua ostetrica.',
+      },
+    ],
+  },
+  {
+    slug: 'massaggio-sportivo-emozionale',
+    title: 'Massaggio sportivo emozionale',
+    subtitle:
+      'Per runner e sportivi amatoriali: prepara il corpo e la testa alla gara e aiuta a recuperare dopo, senza restare bloccati.',
+    cardTitle: 'Massaggio sportivo emozionale',
+    cardDescription: 'Pre e post gara per runner e maratoneti amatoriali: tensioni muscolari ed equilibrio emotivo.',
+    image: '/images/water-ripples.jpg',
+    metaTitle: 'Massaggio sportivo pre e post gara per runner a San Bonifacio (VR)',
+    description:
+      'Massaggio sportivo emozionale a San Bonifacio (VR) per runner e maratoneti amatoriali: trattamenti pre gara e post gara per sciogliere tensioni, recuperare e affrontare la gara con la testa giusta.',
+    keywords: [
+      'massaggio sportivo San Bonifacio',
+      'massaggio pre gara',
+      'massaggio post gara',
+      'massaggio runner Verona',
+      'massaggio maratona',
+      'massaggio sportivo emozionale',
+    ],
+    waMessage: 'Ciao Danya, vorrei prenotare un massaggio sportivo emozionale (pre/post gara)',
+    duration: 'Su misura',
+    price: 'Su richiesta',
+    priceNote: 'Possiamo organizzare un ciclo di sedute intorno alla tua preparazione e alle date di gara.',
+    about: [
+      {
+        heading: 'Non è solo una questione di muscoli',
+        text: 'Crampi, gambe pesanti, rigidità: spesso si pensa solo a sali minerali, magnesio e potassio. Ma il modo in cui affronti la gara, l’ansia della partenza e la gestione del post gara pesano tanto quanto l’allenamento. Il massaggio sportivo emozionale lavora su entrambi i piani: il corpo e la tensione che ti porti dentro.',
+      },
+      {
+        heading: 'Pre gara e post gara',
+        text: 'Prima della gara il trattamento aiuta a sciogliere le tensioni e ad arrivare alla partenza più sciolto e concentrato. Dopo la gara favorisce il recupero, scarica la fatica accumulata e ti aiuta a non restare bloccato nei giorni successivi.',
+      },
+    ],
+    benefits: {
+      title: 'Cosa può darti',
+      items: [
+        'Scioglie tensioni e rigidità muscolari prima della partenza',
+        'Favorisce il recupero e riduce la sensazione di gambe pesanti dopo la gara',
+        'Aiuta a gestire ansia e tensione da prestazione',
+        'Tecniche di rilassamento e riequilibrio per arrivare concentrato',
+        'Un trattamento costruito sul tuo sport, sui tuoi carichi e sulle tue gare',
+      ],
+    },
+    how: 'Partiamo da due chiacchiere su allenamenti, gare in programma, eventuali fastidi e su come vivi la competizione. Il trattamento unisce manualità sportive su gambe e schiena, tecniche di rilassamento e riflessologia, con un’intensità adattata al momento: più attivante nel pre gara, più distensiva nel post gara.',
+    forWho:
+      'Pensato per runner e maratoneti amatoriali, ma adatto a chiunque pratichi sport con costanza: ciclisti, triatleti, appassionati di trail. Non serve credere nella riflessologia: molti runner arrivano scettici e oggi vengono sia prima sia dopo ogni gara.',
+    faq: [
+      {
+        q: 'Quanto prima della gara conviene farlo?',
+        a: 'In genere qualche giorno prima, per lasciare al corpo il tempo di assestarsi. Lo concordiamo in base al tuo calendario.',
+      },
+      {
+        q: 'E dopo la gara?',
+        a: 'Di solito nei 2–3 giorni successivi, quando il corpo ha smaltito la fatica più acuta ed è pronto a recuperare.',
+      },
+      {
+        q: 'Sostituisce il fisioterapista?',
+        a: 'No. In caso di infortuni o dolori importanti è bene rivolgersi a un fisioterapista o a un medico dello sport; il massaggio sportivo emozionale è un trattamento di benessere e recupero.',
+      },
+    ],
+  },
+  {
     slug: 'massaggio-parziale-bambino',
     title: 'Massaggio corpo parziale / bambino',
     subtitle: 'Un trattamento breve e mirato, pensato per sciogliere tensioni con dolcezza.',

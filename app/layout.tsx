@@ -112,8 +112,8 @@ const jsonLd = {
     name: 'Servizi di riflessologia e benessere',
     itemListElement: SERVICES.map((sv) => ({
       '@type': 'Offer',
-      price: sv.price.replace('€', ''),
-      priceCurrency: 'EUR',
+      // Prezzo solo se numerico: i percorsi "su richiesta" non dichiarano un prezzo finto.
+      ...(/^\d+€$/.test(sv.price) ? { price: sv.price.replace('€', ''), priceCurrency: 'EUR' } : {}),
       itemOffered: { '@type': 'Service', name: sv.title, description: sv.cardDescription, url: `${SITE_URL}/servizi/${sv.slug}` },
     })),
   },
