@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import WhatsAppFloatButton from '@/components/WhatsAppFloatButton'
 import MotionProvider from '@/components/motion/MotionProvider'
 import { Analytics } from '@vercel/analytics/react'
+import ContactTracker from '@/components/ContactTracker'
 import { SITE_URL } from '@/lib/constants'
 import { SERVICES } from '@/lib/services'
 
@@ -145,6 +146,7 @@ export default function RootLayout({
           <WhatsAppFloatButton />
         </MotionProvider>
         <Analytics />
+        <ContactTracker />
       </body>
     </html>
   )
