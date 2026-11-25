@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { motion } from 'motion/react'
 import { getWhatsAppUrl } from '@/lib/constants'
 import MobileMenu from './MobileMenu'
 
@@ -18,6 +19,10 @@ const bookingUrl = getWhatsAppUrl('Ciao Danya, vorrei prenotare un appuntamento.
 export default function Navbar() {
   const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
+  const [hovered, setHovered] = useState<string | null>(null)
+  const activeHref = nav.find((i) => (i.href === '/' ? pathname === '/' : pathname.startsWith(i.href)))?.href
+  // La pillola segue il mouse; quando esce torna sulla pagina attiva.
+  const pill = hovered ?? activeHref
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -50,22 +55,33 @@ export default function Navbar() {
           />
           <span className="font-display text-lg font-semibold">Centro Riflessologia</span>
         </Link>
-        <nav className="hidden items-center justify-center gap-8 md:flex">
+        <nav
+          className="hidden items-center justify-center gap-1 rounded-full bg-brand/[0.05] p-1 ring-1 ring-brand/[0.06] backdrop-blur-md md:flex"
+          onMouseLeave={() => setHovered(null)}
+        >
           {nav.map((i) => {
-            const active = i.href === '/' ? pathname === '/' : pathname.startsWith(i.href)
+            const active = i.href === activeHref
             return (
               <Link
                 key={i.href}
                 href={i.href}
                 aria-current={active ? 'page' : undefined}
-                className={`relative text-sm transition-colors ${
-                  active ? 'font-medium text-brand' : 'text-gray-700 hover:text-brand'
+                onMouseEnter={() => setHovered(i.href)}
+                onFocus={() => setHovered(i.href)}
+                onBlur={() => setHovered(null)}
+                className={`relative rounded-full px-4 py-1.5 text-sm transition-colors ${
+                  pill === i.href ? 'font-medium text-brand' : 'text-gray-600 hover:text-brand'
                 }`}
               >
-                {i.label}
-                {active ? (
-                  <span className="absolute -bottom-1.5 left-0 h-0.5 w-full rounded-full bg-peach" aria-hidden />
+                {pill === i.href ? (
+                  <motion.span
+                    layoutId="nav-glass"
+                    className="absolute inset-0 rounded-full bg-white/75 shadow-[inset_0_1px_0_rgba(255,255,255,0.95),inset_0_-1px_0_rgba(16,81,102,0.06),0_6px_18px_-6px_rgba(16,81,102,0.25)] ring-1 ring-white/80 backdrop-blur-xl backdrop-saturate-150"
+                    transition={{ type: 'spring', stiffness: 420, damping: 34, mass: 0.8 }}
+                    aria-hidden
+                  />
                 ) : null}
+                <span className="relative">{i.label}</span>
               </Link>
             )
           })}
