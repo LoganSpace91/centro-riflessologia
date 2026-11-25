@@ -5,6 +5,7 @@ import { SERVICES } from '@/lib/services'
 import { getWhatsAppUrl, WHATSAPP_BASE_URL, INSTAGRAM_URL, EMAIL, PHONE } from '@/lib/constants'
 
 export const metadata = {
+  alternates: { canonical: '/servizi' },
   title: 'Servizi — Massaggio di riflessologia a San Bonifacio',
   description:
     'Servizi del Centro Riflessologia: massaggio di riflessologia plantare per i piedi e trattamenti olistici personalizzati a San Bonifacio, eseguiti da professionisti.',

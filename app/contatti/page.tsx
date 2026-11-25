@@ -3,6 +3,7 @@ import ContactForm from '@/components/ContactForm'
 import { getWhatsAppUrl, WHATSAPP_BASE_URL, INSTAGRAM_URL, EMAIL, PHONE, ADDRESS } from '@/lib/constants'
 
 export const metadata = {
+  alternates: { canonical: '/contatti' },
   title: 'Contatti — Prenota il tuo trattamento',
   description:
     'Contatta il Centro Riflessologia a San Bonifacio (VR): telefono, WhatsApp, email e mappa. Prenota il tuo massaggio di riflessologia plantare a Verona e provincia.',

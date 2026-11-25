@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://centro-riflessologia.vercel.app/sitemap.xml
+Sitemap: https://studioriflessologia.com/sitemap.xml
 
 

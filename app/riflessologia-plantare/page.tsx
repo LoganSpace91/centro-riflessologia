@@ -1,6 +1,7 @@
 import { getWhatsAppUrl } from '@/lib/constants'
 
 export const metadata = {
+  alternates: { canonical: '/riflessologia-plantare' },
   title: 'Riflessologia plantare — Massaggio piedi a San Bonifacio',
   description:
     'Riflessologia plantare professionale a San Bonifacio e Verona: benefici, svolgimento e consigli per trarre il meglio da ogni seduta.',

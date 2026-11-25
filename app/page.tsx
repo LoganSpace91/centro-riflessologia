@@ -8,6 +8,7 @@ import { Stagger, StaggerItem } from '@/components/motion/Stagger'
 import { getWhatsAppUrl, INSTAGRAM_URL, ADDRESS } from '@/lib/constants'
 
 export const metadata = {
+  alternates: { canonical: '/' },
   title: 'Massaggio di riflessologia a San Bonifacio | Professionisti dei piedi',
   description:
     'Centro Riflessologia a San Bonifacio (VR) e Verona: massaggio di riflessologia plantare per i piedi eseguito da professionisti. Prenota ora una seduta di benessere.',

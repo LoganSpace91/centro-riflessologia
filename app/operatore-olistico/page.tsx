@@ -2,6 +2,7 @@ import Hero from '@/components/Hero'
 import { getWhatsAppUrl, INSTAGRAM_URL } from '@/lib/constants'
 
 export const metadata = {
+  alternates: { canonical: '/operatore-olistico' },
   title: 'Operatore olistico — Approccio e metodo',
   description:
     'Chi è e cosa fa un operatore olistico: approccio, metodo e ambiti di intervento. Centro Riflessologia a San Bonifacio (VR), Verona e provincia.',

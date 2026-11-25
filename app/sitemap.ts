@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next'
 import { SERVICES } from '@/lib/services'
+import { SITE_URL } from '@/lib/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://centro-riflessologia.vercel.app'
+  const baseUrl = SITE_URL
   const now = new Date()
 
   return [

@@ -4,6 +4,7 @@ import { Stagger, StaggerItem } from '@/components/motion/Stagger'
 import { getWhatsAppUrl, PHONE, EMAIL } from '@/lib/constants'
 
 export const metadata = {
+  alternates: { canonical: '/faq' },
   title: 'Missione e FAQ — Domande frequenti',
   description:
     'Risposte alle domande più frequenti su riflessologia plantare, trattamenti, prenotazioni e approccio olistico. Centro Riflessologia a San Bonifacio (VR), Verona.',

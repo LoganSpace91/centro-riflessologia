@@ -1,3 +1,4 @@
+export const SITE_URL = 'https://studioriflessologia.com'
 export const WHATSAPP_NUMBER = '393494493683'
 export const WHATSAPP_BASE_URL = `https://wa.me/${WHATSAPP_NUMBER}`
 export const INSTAGRAM_URL = 'https://instagram.com/centro_riflessologia_sanbo'

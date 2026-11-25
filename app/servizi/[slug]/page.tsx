@@ -19,7 +19,7 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: Params): Metadata {
   const s = getService(params.slug)
-  return s ? { title: s.metaTitle, description: s.description, keywords: s.keywords } : {}
+  return s ? { title: s.metaTitle, description: s.description, keywords: s.keywords, alternates: { canonical: `/servizi/${s.slug}` } } : {}
 }
 
 const h2 = 'font-display text-2xl font-semibold text-brand md:text-3xl'
