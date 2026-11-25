@@ -4,6 +4,7 @@ import { Inter, Fraunces } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppFloatButton from '@/components/WhatsAppFloatButton'
+import MobileBookingBar from '@/components/MobileBookingBar'
 import MotionProvider from '@/components/motion/MotionProvider'
 import { Analytics } from '@vercel/analytics/react'
 import ContactTracker from '@/components/ContactTracker'
@@ -22,6 +23,9 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
+  // Il sito è solo chiaro: impedisce ai browser mobile (Chrome/Brave/Samsung) di scurirlo da soli.
+  colorScheme: 'only light',
+  themeColor: '#FDF8F3',
 }
 
 export const metadata: Metadata = {
@@ -144,6 +148,7 @@ export default function RootLayout({
           <main id="maincontent" className="min-h-[70vh]">{children}</main>
           <Footer />
           <WhatsAppFloatButton />
+          <MobileBookingBar />
         </MotionProvider>
         <Analytics />
         <ContactTracker />

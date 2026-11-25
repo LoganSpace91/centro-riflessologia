@@ -92,7 +92,7 @@ export default function Navbar() {
             Prenota
           </a>
         </div>
-        <MobileMenu bookingUrl={bookingUrl} />
+        <MobileMenu />
       </div>
     </header>
   )

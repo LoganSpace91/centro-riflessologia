@@ -1,10 +1,11 @@
 import { getWhatsAppUrl } from '@/lib/constants'
 
+/** Solo desktop: su mobile la prenotazione è nella barra fissa in basso (MobileBookingBar). */
 export default function WhatsAppFloatButton() {
   return (
     <a
       href={getWhatsAppUrl('Ciao Danya, vorrei informazioni e prenotare.')}
-      className="animate-float-in fixed right-6 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition hover:bg-green-600"
+      className="animate-float-in fixed right-6 z-40 hidden md:inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition hover:bg-green-600"
       style={{ bottom: 'max(1.5rem, env(safe-area-inset-bottom, 1.5rem))' }}
       aria-label="Scrivi su WhatsApp"
     >

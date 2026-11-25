@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: only light;
   /* Blu petrolio del brand */
   --brand: 16 81 102; /* #105166 */
   --brand-foreground: 255 255 255;
