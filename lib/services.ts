@@ -66,48 +66,6 @@ export const SERVICES: Service[] = [
     ],
   },
   {
-    slug: 'riflessologia-impacco',
-    title: 'Riflessologia con impacco terapeutico',
-    subtitle: 'La sinergia tra riflessologia plantare e impacco caldo/funzionale per un rilassamento profondo.',
-    cardTitle: 'Massaggio corpo con riflessologia plantare + impacco terapeutico',
-    cardDescription: 'Riflessologia dei piedi con applicazione di impacco: azione sinergica, profondo relax.',
-    image: '/images/foot-massage-2.jpg',
-    metaTitle: 'Riflessologia plantare con impacco terapeutico',
-    description:
-      'Massaggio di riflessologia plantare con impacco terapeutico a San Bonifacio e Verona: trattamento sinergico per benessere e relax.',
-    keywords: ['Massaggio', 'Riflessologia', 'piedi', 'professionisti', 'San Bonifacio', 'Riflessologia plantare Verona'],
-    waMessage: 'Prenotazione Riflessologia con impacco',
-    duration: '50–60 min',
-    price: '55€',
-    priceNote: 'Possibilità di percorsi personalizzati.',
-    about: [
-      {
-        heading: 'Un trattamento dolce e rigenerante per corpo e anima',
-        text: "Questo massaggio speciale unisce la riflessologia plantare a un impacco terapeutico avvolgente. Mentre le mani lavorano sui punti riflessi dei piedi, l'impacco caldo dalle proprietà lenitive e antinfiammatorie amplifica l'effetto rilassante e rigenerante del trattamento.",
-      },
-    ],
-    benefits: {
-      title: "Benefici dell'unione sinergica",
-      items: [
-        "Relax profondo grazie all'azione combinata di impacco caldo e stimolazione riflessa",
-        'Miglioramento della circolazione sanguigna e linfatica, con eliminazione di tossine e gonfiori',
-        'Sollievo da dolori muscolari e articolari per effetto antinfiammatorio e rilassante',
-        'Sensazione di leggerezza e benessere che si irradia in tutto il corpo',
-        'Riequilibrio psicofisico e rivitalizzazione energetica',
-      ],
-    },
-    how: "Si inizia con un massaggio riflessologico ai piedi per sciogliere stress e tensioni. Successivamente viene applicato un impacco caldo specifico (a base di erbe, alghe o oli naturali) lasciato agire alcuni minuti. Durante l'impacco, il massaggiatore continua con manovre dolci per integrare l'effetto e portare a un rilassamento profondo e completo.",
-    forWho:
-      "Ideale per chi cerca un rimedio naturale contro stress, stanchezza muscolare, dolori articolari o piedi stanchi e gonfi. Perfetto per chi desidera migliorare la circolazione e vivere un'esperienza di massaggio completa e rigenerante.",
-    faq: [
-      {
-        q: 'Serve preparazione?',
-        a: 'È sufficiente indossare abiti comodi e arrivare qualche minuto prima. Evita pasti molto pesanti nelle ore precedenti.',
-      },
-      { q: "L'impacco è sempre lo stesso?", a: 'No, viene scelto di volta in volta in base alle tue esigenze e alla risposta del corpo.' },
-    ],
-  },
-  {
     slug: 'riflessologia-fertilita-gravidanza',
     title: 'Riflessologia per fertilità e gravidanza',
     subtitle:

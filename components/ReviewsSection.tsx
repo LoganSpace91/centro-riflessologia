@@ -61,13 +61,6 @@ const reviews: Review[] = [
     photo: 'https://i.pravatar.cc/96?img=32',
   },
   {
-    name: 'Luca R. — Impacco terapeutico',
-    text:
-      'Danya ha scelto un impacco alle erbe su misura e ha lavorato con pazienza sui miei piedi: mal di schiena dimezzato in due sedute.',
-    rating: 4.9,
-    photo: 'https://i.pravatar.cc/96?img=47',
-  },
-  {
     name: 'Elena S. — Massaggio bimbo',
     text:
       'Il tocco di Danya è stato dolcissimo: ha parlato con mio figlio, ci ha coinvolti e ora dorme sereno. Un supporto prezioso per noi genitori.',
@@ -105,13 +98,6 @@ const reviews: Review[] = [
   {
     name: 'Cliente verificato',
     text:
-      'Impacco alle erbe: piedi sgonfi e caldi per giorni. Ogni passaggio spiegato con cura.',
-    rating: 5,
-    photo: 'https://i.pravatar.cc/96?img=41',
-  },
-  {
-    name: 'Cliente verificato',
-    text:
       'Pelle sensibile? Il trattamento viso ALIUS ha rispettato ogni esigenza: texture uniforme e luce naturale.',
     rating: 4.7,
     photo: 'https://i.pravatar.cc/96?img=12',
@@ -129,13 +115,6 @@ const reviews: Review[] = [
       'Dolori cervicali ridotti del 70%. Sedute personalizzate e tanta disponibilità.',
     rating: 4.8,
     photo: 'https://i.pravatar.cc/96?img=44',
-  },
-  {
-    name: 'Cliente verificato',
-    text:
-      'Riflessologia + impacco: routine più leggera e tanta energia. Centro accogliente e professionale.',
-    rating: 5,
-    photo: 'https://i.pravatar.cc/96?img=31',
   },
 ]
 

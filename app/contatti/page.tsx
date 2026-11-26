@@ -1,6 +1,6 @@
 import MapEmbed from '@/components/MapEmbed'
 import ContactForm from '@/components/ContactForm'
-import { getWhatsAppUrl, WHATSAPP_BASE_URL, INSTAGRAM_URL, EMAIL, PHONE, ADDRESS } from '@/lib/constants'
+import { getWhatsAppUrl, WHATSAPP_BASE_URL, INSTAGRAM_URL, EMAIL, PHONE, PHONE_2, ADDRESS } from '@/lib/constants'
 
 export const metadata = {
   alternates: { canonical: '/contatti' },
@@ -21,6 +21,8 @@ export default function ContattiPage() {
             <li>
               <span className="font-semibold">Telefono:</span>{' '}
               <a className="underline" href={`tel:${PHONE.replace(/\s/g, '')}`}>{PHONE}</a>
+              {' · '}
+              <a className="underline" href={`tel:${PHONE_2.replace(/\s/g, '')}`}>{PHONE_2}</a>
             </li>
             <li>
               <span className="font-semibold">WhatsApp:</span>{' '}

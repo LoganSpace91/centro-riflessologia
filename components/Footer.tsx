@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { WHATSAPP_BASE_URL, INSTAGRAM_URL, EMAIL, PHONE, ADDRESS } from '@/lib/constants'
+import { WHATSAPP_BASE_URL, INSTAGRAM_URL, EMAIL, PHONE, PHONE_2, ADDRESS } from '@/lib/constants'
 
 export default function Footer() {
   return (
@@ -27,6 +27,8 @@ export default function Footer() {
             <ul className="mt-2 space-y-2 text-sm text-gray-700">
               <li>
                 Tel: <a className="underline" href={`tel:${PHONE.replace(/\s/g, '')}`}>{PHONE}</a>
+                {' · '}
+                <a className="underline" href={`tel:${PHONE_2.replace(/\s/g, '')}`}>{PHONE_2}</a>
               </li>
               <li>
                 WhatsApp: <a className="underline" href={WHATSAPP_BASE_URL}>Chatta con noi</a>
