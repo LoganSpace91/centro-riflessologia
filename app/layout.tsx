@@ -89,8 +89,9 @@ const jsonLd = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 45.3967,
-    longitude: 11.2689,
+    // Via Tombole è a Prova (frazione di San Bonifacio), non in centro.
+    latitude: 45.3942,
+    longitude: 11.3031,
   },
   openingHoursSpecification: [
     {
